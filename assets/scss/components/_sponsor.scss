@@ -1,0 +1,49 @@
+.partners{
+	background-color: var(--color-white-4);
+	padding: 28px 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 135px;
+
+	@media (max-width:1150px) {
+		gap: 115px;	
+	}
+	
+	@media (max-width:1064px) {
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	&-imgs{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		gap: 135px;
+		
+		@media (max-width:1150px) {
+			gap: 115px;	
+		}
+		
+		@media (max-width:800px) {
+			gap: 90px;	
+		}
+		
+		@media (max-width:700px) {
+			gap: 50px;	
+		}
+
+		@media (max-width:590px) {
+			flex-wrap: wrap;
+			row-gap: 20px;
+		}
+	}
+
+	&-link{
+		color: var(--color-primary);
+		font-size: 17px;
+		font-weight: 700;
+	}
+
+}

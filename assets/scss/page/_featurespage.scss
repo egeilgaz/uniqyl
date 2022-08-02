@@ -1,0 +1,358 @@
+.features-page {
+  --color-purple: #0000ff;
+
+  header {
+    position: relative;
+    z-index: 10;
+
+    &::after {
+      display: block;
+      content: "";
+      background-color: var(--color-white-2);
+      height: 100%;
+      width: 691px;
+      z-index: -1;
+      position: absolute;
+      right: -68px;
+      top: 0px;
+    }
+  }
+
+  .btn.btn-secondary {
+    color: var(--color-primary);
+    text-align: left;
+    justify-content: flex-start;
+
+    &::after {
+      background-image: url(../img/right-arrow-blue.png);
+    }
+
+    &::after:hover {
+      width: 30px;
+    }
+  }
+
+  .features-row {
+    display: flex;
+    align-items: center;
+  }
+
+  .features-row-10 {
+    padding-top: 100px;
+    padding-bottom: 110px;
+    justify-content: center;
+    gap: 138px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+
+    @media (max-width: 950px) {
+      flex-direction: column;
+    }
+
+    @media (max-width: 1300px) {
+      gap: 40px;
+    }
+
+    .features-text {
+      max-width: 599px !important;
+      width: 100% !important;
+
+      @media (max-width: 1300px) {
+        max-width: 700px !important;
+      }
+
+      h1 {
+        @extend .heading-primary;
+      }
+
+      h3 {
+        margin-top: 118px;
+        margin-bottom: 49px;
+        color: #6a5fde;
+        @media (max-width: 1300px) {
+          margin-top: 32px;
+        }
+      }
+
+      p {
+        margin-bottom: 74px;
+      }
+    }
+
+    .features-img {
+      margin-left: 0;
+      margin-right: -170px;
+      max-width: 782px;
+      width: 100%;
+      height: 580px;
+
+      @media (max-width: 1900px) {
+        margin-right: 0px;
+        max-width: auto;
+      }
+
+      @media (max-width: 950px) {
+        height: auto;
+      }
+
+      img {
+        width: 100%;
+        // height: 100%;
+      }
+    }
+  }
+
+  .visitors {
+    & .container {
+      max-width: 1320px;
+      margin: 0 auto;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    &-text {
+      margin-top: 85px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      @media (max-width: 950px) {
+        flex-direction: column;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      h2 {
+        font-weight: 700;
+        font-size: 33px;
+        line-height: 43px;
+        text-transform: capitalize;
+        color: #0000ff;
+        max-width: 530px;
+
+        @media (max-width: 950px) {
+          max-width: 100%;
+          margin-bottom: 32px;
+          font-size: 28px;
+        }
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+        color: #5c5d5d;
+        margin-bottom: 54px;
+        @media (max-width: 950px) {
+          font-size: 18px !important;
+        }
+      }
+
+      &-right {
+        max-width: 536px;
+
+        & .btn.btn-secondary {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .services {
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #6a5fde;
+
+    .hero {
+      text-align: center;
+      background-color: transparent;
+      color: var(--color-white);
+
+      h1 {
+        max-width: 550px;
+      }
+      p {
+        max-width: 842px;
+        color: var(--color-white);
+      }
+    }
+    &-img {
+      background-color: #6a5fde;
+      padding-top: 93px;
+    }
+
+    &-text {
+      max-width: 100%;
+      text-align: center;
+      padding: 0;
+      background-color: #6a5fde;
+
+      h1 {
+        max-width: 100%;
+        padding: 0 20px;
+
+        @media (max-width: 800px) {
+          font-size: 30px;
+        }
+
+        @media (max-width: 600px) {
+          font-size: 28px;
+        }
+      }
+
+      > p {
+        max-width: 842px;
+        margin: 0 auto;
+        margin-top: 38px;
+        margin-bottom: 65px;
+        padding: 0 20px;
+
+        @media (max-width: 600px) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    &-benefits {
+      flex-direction: row;
+      border-top: 2px solid var(--color-white);
+      align-items: stretch;
+
+      @media (max-width: 950px) {
+        flex-direction: column;
+        row-gap: 0px;
+      }
+
+      .benefit {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 120px 70px 130px 100px;
+        gap: 0;
+
+        @media (max-width: 1300px) {
+          padding: 72px 48px;
+        }
+
+        @media (max-width: 950px) {
+          padding: 48px 40px;
+        }
+
+        @media (max-width: 800px) {
+          padding: 48px 20px;
+        }
+
+        &:not(:last-child) {
+          border-right: 2px solid var(--color-white);
+
+          @media (max-width: 950px) {
+            border-right: 0px;
+            border-bottom: 2px solid var(--color-white);
+          }
+        }
+
+        img {
+          width: max-content;
+          max-width: max-content;
+          height: max-content;
+        }
+
+        &-text {
+          h4 {
+            text-align: left;
+            margin-top: 45px;
+            margin-bottom: 50px;
+          }
+          p {
+            text-align: left;
+            margin-bottom: 55px;
+          }
+        }
+      }
+    }
+  }
+
+  .benefits {
+    padding-top: 0;
+
+    .hero {
+      background-color: transparent;
+      align-items: start;
+      h1 {
+        text-align: left;
+      }
+      p {
+        text-align: left;
+      }
+    }
+
+    &-top {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      gap: 100px;
+
+      @media (max-width: 1200px) {
+        flex-direction: column;
+        gap: 50px;
+        margin-bottom: 100px;
+      }
+    }
+
+    &-img {
+      margin-right: -7.9%;
+
+      @media (max-width: 1860px) {
+        margin-right: -8.9%;
+      }
+
+      @media (max-width: 1360px) {
+        img {
+          max-width: 100%;
+        }
+      }
+
+      @media (max-width: 1200px) {
+        margin-right: 0;
+      }
+
+      @media (max-width: 500px) {
+        margin-right: -20px;
+        margin-left: -20px;
+      }
+    }
+
+    &-text {
+      padding-left: 170px;
+
+      @media (max-width: 1570px) {
+        padding-left: 0;
+      }
+
+      .btn-secondary {
+        display: inline-flex;
+        color: #6a5fde;
+        text-decoration: underline #6a5fde;
+        // width: 100%;
+        border: none;
+        margin-top: 55px;
+        &::after {
+          background-image: url(../img/right-arrow-purple.png);
+        }
+
+        &:hover {
+          color: var(--color-purple);
+        }
+      }
+    }
+  }
+
+  .primary-cards {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 191px;
+    row-gap: 100px;
+  }
+}

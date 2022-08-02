@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-family: var(--font-dm);
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container-2 {
+  max-width: 1360px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.wrapper {
+  width: 100vw !important;
+  overflow-x: hidden;
+
+  .footer-bottom {
+    margin-top: 0;
+  }
+}
+
+// abstract files here
+@import "abstract/typography";
+@import "abstract/variables";
+
+// components files here
+@import "components/navbar";
+@import "components/footer";
+@import "components/btns";
+@import "components/sponsor";
+@import "components/features";
+@import "components/services";
+@import "components/benefits";
+@import "components/cards";
+@import "components/testimonial";
+@import "components/hero";
+@import "components/form";
+
+//page files here
+@import "page/home";
+@import "page/featurespage";
+@import "page/referenece";
+@import "page/stories";
+@import "page/about-us";
+@import "page/question";
+@import "page/contact-us";
+@import "page/price-page";

@@ -1,0 +1,109 @@
+.benefits{
+	background-color: var(--color-purple-2);
+	padding: 130px;
+	padding-bottom: 68px;
+
+	@media (max-width:1700px) {
+		padding: 80px;
+	}
+	
+	@media (max-width:1510px) {
+		padding: 50px;
+	}
+	
+	@media (max-width:1170px) {
+		padding: 40px;
+	}
+	
+	@media (max-width:800px) {
+		padding: 20px;
+	}
+	
+	
+	&-top{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 77px;
+		gap: 110px;
+		
+		@media (max-width:1540px) {
+			gap: 80px;	
+		}
+
+		@media (max-width:1460px) {
+			gap: 50px;
+		}
+
+		@media (max-width:1170px) {
+			flex-direction: column;
+		}
+		
+
+	
+	}
+
+	&-img{
+		img{
+			width: 100%;
+
+			@media (max-width:1360px) {
+				max-width: 550px;
+			}
+		}
+	}
+
+
+	&-text{
+		
+		
+		@media (max-width:1170px) {
+			align-self: flex-start;
+		}
+
+
+
+		h1{
+			@extend .heading-primary;
+			max-width: 580px;
+			text-transform: capitalize;
+
+			@media (max-width:1460px) {
+				font-size: 38px;
+			}
+
+			
+			@media (max-width:1170px) {
+				max-width: 100%;
+				font-size: 36px;
+			}
+			
+			@media (max-width:800px) {
+				line-height: 50px;
+				font-size: 32px;
+			}
+		}
+		
+		p{
+			@extend .text-primary;
+			margin-top: 50px;
+			max-width: 683px;
+
+			@media (max-width:1170px) {
+				max-width: 100%;
+			}
+		}
+	}
+
+	.btn.btn-primary{
+		display: block;
+		width: max-content;
+		padding: 15px 22px;
+
+		margin: 0 auto;
+		margin-top: 76px;
+		font-size: 18.18px;
+	}
+
+
+}

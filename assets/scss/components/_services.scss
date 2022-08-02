@@ -1,0 +1,168 @@
+.services {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+
+  @media (max-width: 1300px) {
+    flex-direction: column;
+  }
+
+  &-img {
+    background-color: var(--color-white-3);
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 1300px) {
+      justify-content: center;
+      padding: 40px;
+    }
+
+    @media (max-width: 600px) {
+      padding: 40px 20px;
+    }
+
+    img {
+      // width: 100%;
+      padding-left: 48px;
+      padding-right: 45px;
+
+      @media (max-width: 1600px) {
+        padding: 0;
+      }
+
+      @media (max-width: 1500px) {
+        max-width: 700px;
+      }
+
+      @media (max-width: 1400px) {
+        max-width: 650px;
+      }
+
+      @media (max-width: 1300px) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &-text {
+    background-color: var(--color-purple);
+    padding: 104px 110px 67px;
+    color: var(--color-white);
+
+    @media (max-width: 1800px) {
+      padding: 80px;
+    }
+
+    @media (max-width: 1700px) {
+      padding: 60px;
+    }
+
+    @media (max-width: 1500px) {
+      padding: 40px;
+    }
+
+    @media (max-width: 800px) {
+      padding: 20px;
+    }
+
+    h1 {
+      @extend .heading-primary;
+      max-width: 700px;
+      text-transform: capitalize;
+      color: var(--color-white);
+
+      @media (max-width: 1800px) {
+        font-size: 42px;
+      }
+
+      @media (max-width: 1700px) {
+        font-size: 38px;
+      }
+
+      @media (max-width: 1600px) {
+        font-size: 34px;
+        line-height: 48px;
+      }
+
+      @media (max-width: 1300px) {
+        max-width: 100%;
+        text-align: center;
+        font-size: 32px;
+        line-height: 40px;
+      }
+    }
+
+    > p {
+      @extend .text-primary;
+      color: var(--color-white);
+      margin-top: 38px;
+      margin-bottom: 51px;
+
+      @media (max-width: 1500px) {
+        font-size: 19px;
+      }
+    }
+  }
+
+  &-benefits {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+
+    @media (max-width: 700px) {
+      row-gap: 50px;
+    }
+
+    .benefit {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      max-width: 787px;
+
+      @media (max-width: 1300px) {
+        max-width: 100%;
+      }
+
+      @media (max-width: 1300px) {
+        max-width: 100%;
+      }
+
+      @media (max-width: 700px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      img {
+        width: 75px;
+        height: 75px;
+      }
+
+      &-text {
+        h4 {
+          font-size: 30px;
+          line-height: 39px;
+
+          @media (max-width: 1700px) {
+            font-size: 27px;
+          }
+
+          @media (max-width: 1500px) {
+            font-size: 24px;
+          }
+
+          @media (max-width: 1000px) {
+            font-size: 22px;
+          }
+        }
+
+        p {
+          font-size: 18px;
+          line-height: 23.44px;
+          margin-top: 11px;
+        }
+      }
+    }
+  }
+}

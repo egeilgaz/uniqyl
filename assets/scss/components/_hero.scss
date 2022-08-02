@@ -1,0 +1,36 @@
+.hero{
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 40px 20px 110px;
+
+	h1{
+		max-width: 483px;
+		width: 100%;
+		@extend .heading-primary;
+	}
+
+	p{
+		max-width: 536px;
+		width: 100%;
+		@extend .text-primary;
+		font-size: 20px;
+		margin-top: 74px;
+
+		@media (max-width:1200px) {
+			margin-top: 40px;
+		}
+
+		@media (max-width:800px) {
+			margin-top: 20px;
+
+			font-size: 18px;
+		}
+	}
+}
+
+.bg-color{
+	background-color: var(--color-white-5);
+}

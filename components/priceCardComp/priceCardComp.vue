@@ -1,0 +1,50 @@
+<template>
+  <div class="price-card" :class="price.isFeatured ? 'featured' : null">
+    <div class="top">
+      <div v-if="price.isFeatured" class="featured-badge">EN POPÜLER</div>
+      <h3>
+        {{ price.price }}<span>/{{ price.time }}</span>
+      </h3>
+      <h2>{{ price.package }}</h2>
+      <p>
+        {{ price.content }}
+      </p>
+
+      <ul>
+        <li v-for="feature in price.features" :key="feature.id">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20C15.5228 20 20 15.5228 20 10C19.9936 4.47982 15.5202 0.00642897 10 0Z"
+              fill="currentColor"
+              fill-opacity="0.103693"
+            />
+            <path
+              d="M15.7727 6.83331L10.0685 14.5741C9.93246 14.7546 9.7296 14.8729 9.50552 14.9024C9.28143 14.9318 9.0549 14.87 8.87683 14.7308L4.8035 11.4741C4.44405 11.1865 4.38585 10.6619 4.6735 10.3025C4.96115 9.94303 5.48572 9.88483 5.84516 10.1725L9.24183 12.89L14.431 5.84748C14.6012 5.59214 14.8979 5.45096 15.2033 5.48001C15.5088 5.50906 15.7736 5.70362 15.8926 5.98646C16.0116 6.26929 15.9655 6.59463 15.7727 6.83331Z"
+              fill="currentColor"
+            />
+          </svg>
+          {{ feature.content }}
+        </li>
+      </ul>
+    </div>
+
+    <a href="#!" class="btn-tertiary">Ücretsiz Dene</a>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    price: {
+      type: Object,
+      default: () => {},
+    },
+  },
+};
+</script>
