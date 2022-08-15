@@ -31,7 +31,7 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: ["@nuxt/image"],
+  buildModules: [],
   image: {
     dir: "assets/img/"
   },
@@ -43,6 +43,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
     "@nuxtjs/style-resources",
+    "@nuxt/image",
     [
       "nuxt-i18n",
       {
