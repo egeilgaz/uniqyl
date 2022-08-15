@@ -23,7 +23,7 @@
       </div>
 
       <div class="about-us-banner">
-        <img src="../assets/img/about-us-banner-img.png" alt="" />
+        <nuxt-img src="about-us-banner-img.png" alt="aboutus" />
       </div>
 
       <div class="about-us-counter">

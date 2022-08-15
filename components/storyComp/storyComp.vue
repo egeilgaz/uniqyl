@@ -6,7 +6,7 @@
       :style="data.isLast ? 'margin-bottom:0px;' : ''"
     >
       <div class="story-img">
-        <img :src="getImgUrl(data.img)" alt="" />
+        <nuxt-img :src="data.img" alt="story" :placeholder="[70]"/>
       </div>
 
       <div class="story-content">
@@ -20,7 +20,7 @@
           <h4>{{ data.userName }}</h4>
           <h5>{{ data.company }}</h5>
 
-          <img :src="getImgUrl(data.companyImage)" alt="" />
+          <nuxt-img :src="data.companyImage" alt="company" />
         </div>
       </div>
     </div>
@@ -28,9 +28,7 @@
 </template>
 
 <script>
-import global from "@/mixins/global.js";
 export default {
-  mixins: [global],
   props: {
     data: {
       type: Object,

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="primary-card">
-      <img :src="getImgUrl(primaryCard.img)" alt="" />
+      <nuxt-img :src="primaryCard.img" alt="primaryCard" />
       <h4>{{ primaryCard.title }}</h4>
       <p>
         {{ primaryCard.content }}
@@ -11,9 +11,7 @@
 </template>
 
 <script>
-import global from "@/mixins/global.js";
 export default {
-  mixins: [global],
   props: {
     primaryCard: {
       type: Object,

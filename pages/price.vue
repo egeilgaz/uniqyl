@@ -1,22 +1,9 @@
 <template>
   <div class="wrapper features-page price-page">
-    <!-- <div class="features-row">
-      <div class="features-text">
-        <titleComp :title="title" />
-        <a href="#" class="btn btn-secondary">Hemen Başla</a>
-      </div>
-
-      <div class="features-img">
-        <img src="../assets/img/price-img.png" alt="" />
-      </div>
-    </div> -->
-
     <div class="price-section">
       <div class="price-section-top">
         <titleComp :title="title2" />
-
         <tabsComp :tabs="tabs" @changeTab="changeTab" />
-
         <div class="tab-cont">
           <div class="tab-content tab-content-1">
             <priceCardComp
@@ -27,19 +14,16 @@
           </div>
         </div>
       </div>
-
       <div class="price-table">
         <div class="container">
           <div class="header">
             <div class="header-left">
               <titleComp :title="title3" />
             </div>
-
             <div class="header-right">
               <tabsComp :tabs="tabs" @changeTab="changeTab" />
             </div>
           </div>
-
           <div class="tab-content-list" id="montly-list" style="display: block">
             <div class="columns">
               <priceListComp
@@ -94,7 +78,7 @@ export default {
           ],
         },
         {
-          id: 1,
+          id: 2,
           isFeatured: true,
           price: "100₺",
           time: "Aylık",

@@ -1,25 +1,32 @@
-.reference{	
+.reference {
+  &-page {
+    .hero {
+      padding: 30px 20px 50px;
+      p {
+        margin-top: 50px;
+      }
+    }
+  }
 
-	&-section{
-		background-color: white;
-		padding-bottom: 97px;
+  &-section {
+    background-color: white;
+    padding-bottom: 97px;
 
-		@media (max-width:1000px) {
-			padding-bottom: 50px;
-		}
+    @media (max-width: 1000px) {
+      padding-bottom: 50px;
+    }
 
-		.btn.btn-primary{
-			display: block;
-			max-width: max-content;
-			margin: 0 auto;
-			padding: 17px 22px;
-			font-size: 18px;
+    .btn.btn-primary {
+      display: block;
+      max-width: max-content;
+      margin: 0 auto;
+      padding: 17px 22px;
+      font-size: 18px;
 
-			@media (max-width:1000px) {
-				padding: 14px 19px;
-				font-size: 16px;
-			}
-		}
-	}
-
+      @media (max-width: 1000px) {
+        padding: 14px 19px;
+        font-size: 16px;
+      }
+    }
+  }
 }

@@ -1,13 +1,11 @@
 <template>
   <a href="#" class="reference-card">
-    <img :src="getImgUrl(card.img)" alt="" />
+    <nuxt-img :src="card.img" alt="referenceCard" :placeholder="[70]" />
   </a>
 </template>
 
 <script>
-import global from "@/mixins/global.js";
 export default {
-  mixins: [global],
   props: {
     card: {
       type: Object,

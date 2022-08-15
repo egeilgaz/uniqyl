@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="reference-page">
     <titleComp :title="title" />
     <div class="reference-section">
       <div class="container-2">
@@ -10,7 +10,7 @@
             :card="reference"
           />
         </div>
-        <formElementsButton buttonName="Mağazamı Oluştur" to="" />
+        <formElementsButton buttonName="Mağazamı Oluştur" to="/" />
       </div>
     </div>
   </div>

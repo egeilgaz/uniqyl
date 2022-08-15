@@ -34,12 +34,11 @@
 .reference{
 
 	&-cards{
-		padding-top: 100px;
+		padding-top: 50px;
 		padding-bottom: 100px;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-		// justify-content: space-between;
-		gap: 248px;
+		gap: 120px;
 		align-items: center;
 
 		@media (max-width:1500px) {

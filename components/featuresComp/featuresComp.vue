@@ -4,7 +4,7 @@
     :class="feature.direction == 'reverse' ? 'features-row-reverse' : ''"
   >
     <div class="features-img">
-      <img :src="getImgUrl(feature.img)" alt="" />
+      <nuxt-img :src="feature.img" alt="features" :placeholder="[70]" />
     </div>
 
     <div class="features-text">
@@ -17,9 +17,7 @@
 </template>
 
 <script>
-import global from '@/mixins/global.js'
 export default {
-  mixins: [global],
   props: {
     feature: {
       type: Object,

@@ -1,8 +1,21 @@
 <template>
   <div class="input-box">
-    <label for="name">{{ label }}</label>
-    <input v-if="!isTextArea" :type="inputType" />
-    <textarea v-else name="textarea" id="textarea" cols="30" rows="10"></textarea>
+    <label for="name" :class="inputSize == 'sm' ? 'sm-label' : ''">{{
+      label
+    }}</label>
+    <input
+      v-if="!isTextArea"
+      :type="inputType"
+      :class="inputSize == 'sm' ? 'sm-input' : ''"
+    />
+    <textarea
+      v-else
+      name="textarea"
+      class="text-area"
+      id="textarea"
+      cols="30"
+      rows="10"
+    ></textarea>
   </div>
 </template>
 
@@ -20,6 +33,10 @@ export default {
     isTextArea: {
       type: Boolean,
       default: false,
+    },
+    inputSize: {
+      type: String,
+      default: "md",
     },
   },
 };

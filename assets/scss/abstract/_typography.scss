@@ -1,79 +1,95 @@
-.heading-primary{
-	font-size: 44px;
-	font-weight: 700;
-	color: var(--color-primary);
-	line-height: 57.29px;
-
-	@media (max-width:1100px) {
-		font-size: 40px;
-		line-height: 52px;
-	}
-	
-	@media (max-width:900px) {
-		font-size: 36px;
-		line-height: 46px;
-	}
-	
-	@media (max-width:800px) {
-		font-size: 32px;
-		line-height: 40px;
-	}
-	
-	@media (max-width:700px) {
-		font-size: 28px;
-		line-height: 34px;
-	}
-	
-	@media (max-width:600px) {
-		font-size: 26px;
-		line-height: 34px;
-	}
-
-	&-white{
-		color: var(--color-white);
-	}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.heading-secondary{
-	font-size: 40px;
-	font-weight: 700;
-	color: var(--color-primary);
-	line-height: 52px;
+a {
+  text-decoration: none;
 }
 
-.heading-tertiary{
-	font-size: 33px;
-	font-weight: 700;
-	line-height: 43px;
-	color: var(--color-primary);
-
-	&-purple{
-		color: var(--color-purple);
-	}
-
+html {
+  font-family: var(--font-dm);
 }
 
-.text-primary{
-	font-size: 20px;
-	font-weight: 400;
-	color: var(--color-grey);
-	line-height: 26px;
-
-
-	@media (max-width:1440px) {
-		font-size: 20px;
-		margin-top: 35px;
-	}
-	
-	@media (max-width:1000px) {
-		font-size: 18px;
-	}
-
-	@media (max-width:700px) {
-		font-size: 16px;
-	}
+body {
+  width: 100vw;
+  overflow-x: hidden;
 }
 
+.heading-primary {
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 57.29px;
+
+  @media (max-width: 1100px) {
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  @media (max-width: 900px) {
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  &-white {
+    color: var(--color-white);
+  }
+}
+
+.heading-secondary {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 52px;
+}
+
+.heading-tertiary {
+  font-size: 33px;
+  font-weight: 700;
+  line-height: 43px;
+  color: var(--color-primary);
+
+  &-purple {
+    color: var(--color-purple);
+  }
+}
+
+.text-primary {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--color-grey);
+  line-height: 26px;
+
+  @media (max-width: 1440px) {
+    font-size: 20px;
+    margin-top: 35px;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 16px;
+  }
+}
 
 // .text-secondary{
 // 	font-size: ;

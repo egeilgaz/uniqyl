@@ -8,17 +8,17 @@
     <div style="background-color: var(--color-white-5)">
       <header>
         <nav class="nav">
-          <a href="#">
-            <img src="../../assets/img/logo.png" alt="" />
-          </a>
-
+          <NuxtLink class="nav-link" to="/">
+            <nuxt-img src="logo.png" alt="logo" />
+          </NuxtLink>
           <div class="nav-list" :class="menuStatus ? 'active' : ''">
-            <a href="" class="nav-link">Özellikler</a>
-            <a href="" class="nav-link">Fiyatlar</a>
-            <a href="" class="nav-link">Referanslar</a>
-            <a href="" class="btn btn-primary btn-nav">Mağazamı Oluştur</a>
+            <NuxtLink class="nav-link" :to="localePath('features')"> {{$t('features')}} </NuxtLink>
+            <NuxtLink class="nav-link" :to="localePath('price')"> {{$t('prices')}} </NuxtLink>
+            <NuxtLink class="nav-link" :to="localePath('references')"> {{$t('references')}} </NuxtLink>
+            <div class="btn btn-primary btn-nav" @click="$emit('openModal')">
+              Mağazamı Oluştur
+            </div>
           </div>
-
           <div class="nav-btn" id="navbtn" @click="openMenu">
             <svg
               class="w-6 h-6"
@@ -34,7 +34,6 @@
             </svg>
           </div>
         </nav>
-
         <div
           v-if="routeName == 'features'"
           class="features-row features-row-10"
@@ -49,23 +48,19 @@
               Ürünlerinizi tek bir ekrandan tüm pazaryerlerine ortak şekilde
               yayınlayın ve kolayca düzenleyin.
             </p>
-
             <a href="#" class="btn btn-secondary">Hemen Başla</a>
           </div>
-
           <div class="features-img">
-            <img src="../../assets/img/features-img-1.png" alt="" />
+            <img src="../../assets/img/features-img-1.png" alt="feature" />
           </div>
         </div>
-
         <div v-if="routeName == 'price'" class="features-row">
           <div class="features-text">
             <titleComp :title="title" />
             <a href="#" class="btn btn-secondary">Hemen Başla</a>
           </div>
-
           <div class="features-img">
-            <img src="../../assets/img/price-img.png" alt="" />
+            <img src="../../assets/img/price-img.png" alt="price" />
           </div>
         </div>
       </header>

@@ -1,5 +1,5 @@
 <template>
-  <a href="to" class="btn btn-primary">{{ buttonName }}</a>
+  <NuxtLink class="btn btn-primary" :to="to"> {{ buttonName }} </NuxtLink>
 </template>
 
 <script>

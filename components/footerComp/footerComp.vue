@@ -3,23 +3,31 @@
     <div class="footer">
       <div class="footer-rows">
         <div class="footer-row footer-row-1">
-          <img src="../../assets/img/logo-white.png" alt="" />
+          <nuxt-img src="logo-white.png" alt="logo" />
 
           <div class="footer-social-links">
-            <a href="#"><img src="../../assets/img/facebook.png" alt="" /></a>
-            <a href="#"><img src="../../assets/img/twitter.png" alt="" /></a>
-            <a href="#"><img src="../../assets/img/instagram.png" alt="" /></a>
-            <a href="#"><img src="../../assets/img/youtube.png" alt="" /></a>
+            <NuxtLink class="nav-link" to="/">
+              <img src="../../assets/img/facebook.png" alt="facebook" />
+            </NuxtLink>
+            <NuxtLink class="nav-link" to="/">
+              <img src="../../assets/img/twitter.png" alt="twitter" />
+            </NuxtLink>
+            <NuxtLink class="nav-link" to="/">
+              <img src="../../assets/img/instagram.png" alt="instagram" />
+            </NuxtLink>
+            <NuxtLink class="nav-link" to="/">
+              <img src="../../assets/img/youtube.png" alt="youtube" />
+            </NuxtLink>
           </div>
         </div>
 
         <div class="footer-row footer-row-2">
           <div class="footer-links">
             <h4>Ürün</h4>
-            <a href="">Özellikler</a>
-            <a href="">Fiyatlar</a>
-            <a href="">Referanslar</a>
-            <a href="">Başarı Hikayeleri</a>
+            <NuxtLink to="features"> Özellikler </NuxtLink>
+            <NuxtLink to="price"> Fiyatlar </NuxtLink>
+            <NuxtLink to="references"> Referanslar </NuxtLink>
+            <NuxtLink to="/"> Başarı Hikayeleri </NuxtLink>
           </div>
 
           <div class="footer-links">
@@ -31,18 +39,19 @@
 
           <div class="footer-links">
             <h4>Müşteri Hizmetleri</h4>
-            <a href="">Destek Merkezi</a>
-            <a href="">İletişim</a>
-            <a href="">Kullanım Politikası</a>
-            <a href="">Gizlilik Sözleşmesi</a>
-            <a href="">Sık Sorulan Sorular</a>
+            <NuxtLink to="/"> Destek Merkezi </NuxtLink>
+            <NuxtLink to="/"> İletişim </NuxtLink>
+            <NuxtLink to="/"> Kullanım Politikası </NuxtLink>
+            <NuxtLink to="/"> Gizlilik Sözleşmesi </NuxtLink>
+            <NuxtLink to="questions"> Sık Sorulan Sorular </NuxtLink>
+
           </div>
         </div>
 
         <div class="footer-row footer-row-3">
           <div class="footer-contact">
             <a>
-              <img src="../../assets/img/headphones.png" alt="" />
+              <img src="../../assets/img/headphones.png" alt="contact" />
               444 44 444
             </a>
             <p>Pazartesi 08.30 - 18.00</p>
@@ -65,7 +74,6 @@
             >
               <a href="#">Türkçe</a>
               <a href="#">English</a>
-              <!-- <a href="#">English</a> -->
             </div>
           </div>
         </div>
@@ -74,7 +82,7 @@
     <div class="footer-bottom">
       © 2022 Mapa | Tüm Hakları Saklıdır.
 
-      <img src="../../assets/img/star.png" alt="" />
+      <img src="../../assets/img/star.png" alt="star" />
     </div>
   </footer>
 </template>

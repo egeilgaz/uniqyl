@@ -1,33 +1,46 @@
 <template>
-  <div>
+  <div v-cloak>
     <div class="home-hero">
       <h1>
         Bugün hayalinizdeki <br />
         e-ticaret mağazasını oluşturun.
       </h1>
-
       <div class="home-hero-img">
-        <img src="../assets/img/home-hero-img.png" alt="" />
+        <nuxt-img src="home-hero-img.webp" :placeholder="[100, 50, 70]" />
       </div>
-
       <p>
         E-ticaret operasyonlarınızı kolayca yönetin, her şeyi otomatikleştirin
         ve tüm pazaryerlerinde ürünlerinizi sergileyin.
       </p>
 
-      <formElementsButton buttonName="Mağazamı Oluştur" to="" />
+      <formElementsButton buttonName="Mağazamı Oluştur" to="/" />
     </div>
 
     <!-- partner section start here -->
     <section class="partners">
       <div class="partners-imgs">
-        <img src="../assets/img/yayla-logo.png" alt="" />
-        <img src="../assets/img/unal-logo.png" alt="" />
-        <img src="../assets/img/matex-logo.png" alt="" />
-        <img src="../assets/img/oskar-logo.png" alt="" />
+        <nuxt-img
+          src="yayla-logo.png"
+          alt="yayla"
+          :placeholder="[100, 50, 70]"
+        />
+        <nuxt-img
+          src="unal-logo.png"
+          alt="unal"
+          :placeholder="[100, 50, 70]"
+        />
+        <nuxt-img
+          src="matex-logo.png"
+          alt="matex"
+          :placeholder="[100, 50, 70]"
+        />
+        <nuxt-img
+          src="oskar-logo.png"
+          alt="oskar"
+          :placeholder="[100, 50, 70]"
+        />
       </div>
-
-      <a href="#" class="partners-link">ve çok daha fazlası +</a>
+      <NuxtLink class="partners-link" to="/"> ve çok daha fazlası + </NuxtLink>
     </section>
 
     <!-- features section start here -->
@@ -48,7 +61,7 @@
     <!-- services section start here -->
     <section class="services">
       <div class="services-img">
-        <img src="../assets/img/e-commerce-img.png" alt="" />
+        <nuxt-img src="e-commerce-img.png" alt="e-commerce" />
       </div>
 
       <div class="services-text">
@@ -77,7 +90,7 @@
     <section class="benefits">
       <div class="benefits-top">
         <div class="benefits-img">
-          <img src="../assets/img/benefits-section-img.png" alt="" />
+          <nuxt-img src="benefits-section-img.png" alt="benefit" />
         </div>
 
         <div class="benefits-text">
@@ -101,7 +114,7 @@
         />
       </div>
 
-      <formElementsButton buttonName="Mağazamı Oluştur" to="" />
+      <formElementsButton buttonName="Mağazamı Oluştur" to="/" />
     </section>
 
     <!-- testimonail section start here -->
@@ -111,7 +124,7 @@
         <slider-item v-for="(i, index) in list" :key="index" :style="i">
           <div class="testimonial-slide">
             <div class="testimonial-img">
-              <img :src="getImgUrl(i.img)" alt="" />
+              <img :src="getImgUrl(i.img)" alt="slideImg" />
             </div>
 
             <div class="testimonial-text">
@@ -124,7 +137,7 @@
               <div class="testimonial-person">
                 <h3>{{ i.userName }}</h3>
                 <p>{{ i.companyName }}</p>
-                <img :src="getImgUrl(i.companyImg)" alt="" />
+                <img  :src="getImgUrl(i.companyImg)" alt="companyImg" />
               </div>
 
               <div class="count">
@@ -140,10 +153,13 @@
 
 <script>
 import global from "@/mixins/global.js";
+
 export default {
   mixins: [global],
   data() {
     return {
+      isLoaded: false,
+      height: 550,
       features: [
         {
           id: 1,
@@ -292,6 +308,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    onImgLoad() {
+      this.isLoaded = true;
+    },
   },
 };
 </script>

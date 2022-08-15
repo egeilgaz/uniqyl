@@ -1,25 +1,5 @@
 <template>
   <div class="features-page">
-    <!-- <div class="features-row-10">
-      <div class="features-text">
-        <h1>
-          Mağazanızın yönetiminde <br />
-          güçlü özelliklere sahip olun
-        </h1>
-        <h3>Tüm Pazaryeri Entegrasyonları</h3>
-        <p>
-          Ürünlerinizi tek bir ekrandan tüm pazaryerlerine ortak şekilde
-          yayınlayın ve kolayca düzenleyin.
-        </p>
-
-        <a href="#" class="btn btn-secondary">Hemen Başla</a>
-      </div>
-
-      <div class="features-img">
-        <img src="../assets/img/features-img-1.png" alt="" />
-      </div>
-    </div> -->
-
     <!-- features section start here -->
     <section class="features">
       <div class="container">
@@ -34,7 +14,7 @@
     <!-- Visitor Section -->
     <section class="visitors">
       <div class="container">
-        <img src="../assets/img/visitors.png" alt="" />
+        <img src="../assets/img/visitors.png" alt="visitor" />
 
         <div class="visitors-text">
           <h2>Ziyaretçi Segmentasyonu ve Dönüşüm Artırım Araçları</h2>
@@ -65,17 +45,17 @@
     <!-- services section start here -->
     <section class="services">
       <div class="services-img">
-        <img src="../assets/img/e-commerce-img.png" alt="" />
+        <img src="../assets/img/e-commerce-img.png" alt="services" />
       </div>
 
       <div class="services-text">
         <titleComp :title="title" />
 
         <div class="services-benefits">
-          <benefitCardComp
+          <benefitComp
             v-for="benefitCard in benefitCards"
             :key="benefitCard.id"
-            :data="benefitCard"
+            :benefit="benefitCard"
           />
         </div>
       </div>
@@ -85,7 +65,7 @@
     <section class="benefits">
       <div class="benefits-top">
         <div class="benefits-img">
-          <img src="../assets/img/benefits-section-img-2.png" alt="" />
+          <img src="../assets/img/benefits-section-img-2.png" alt="benefits" />
         </div>
 
         <div class="benefits-text">
