@@ -19,7 +19,6 @@ export default {
       },
     ],
   },
-  target: "static",
   router: {},
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["~/assets/scss/main.scss"],
@@ -31,9 +30,10 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: ["@nuxt/image"],
-  image: {
-    dir: "static/images",
+  buildModules: [],
+
+  serverMiddleware: {
+    '/_ipx': '~/server/middleware/ipx.js'
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -41,6 +41,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
     "@nuxtjs/style-resources",
+    "@nuxt/image",
     [
       "nuxt-i18n",
       {
