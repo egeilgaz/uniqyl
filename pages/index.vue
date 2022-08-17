@@ -6,7 +6,7 @@
         e-ticaret mağazasını oluşturun.
       </h1>
       <div class="home-hero-img">
-        <nuxt-img src="home-hero-img.png" :placeholder="[100, 50, 70]" provider="static" />
+        <nuxt-img src="home-hero-img.png" :placeholder="[70]" />
       </div>
       <p>
         E-ticaret operasyonlarınızı kolayca yönetin, her şeyi otomatikleştirin
@@ -22,25 +22,25 @@
         <nuxt-img
           src="yayla-logo.png"
           alt="yayla"
-          :placeholder="[100, 50, 70]"
+          :placeholder="[70]"
           provider="static"
         />
         <nuxt-img
           src="unal-logo.png"
           alt="unal"
-          :placeholder="[100, 50, 70]"
+          :placeholder="[70]"
           provider="static"
         />
         <nuxt-img
           src="matex-logo.png"
           alt="matex"
-          :placeholder="[100, 50, 70]"
+          :placeholder="[70]"
           provider="static"
         />
         <nuxt-img
           src="oskar-logo.png"
           alt="oskar"
-          :placeholder="[100, 50, 70]"
+          :placeholder="[70]"
           provider="static"
         />
       </div>
