@@ -5,7 +5,7 @@
     <div class="contact-us">
       <div class="story">
         <div class="story-img">
-          <nuxt-img src="contact-us-img.png" alt="contactus" :placeholder="[70]" />
+          <nuxt-img src="contact-us-img.png" alt="contactus" :placeholder="[70]" provider="static" />
         </div>
 
         <div class="story-content">

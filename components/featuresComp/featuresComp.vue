@@ -4,7 +4,7 @@
     :class="feature.direction == 'reverse' ? 'features-row-reverse' : ''"
   >
     <div class="features-img">
-      <nuxt-img :src="feature.img" alt="features" :placeholder="[70]" />
+      <nuxt-img :src="feature.img" alt="features" :placeholder="[70]" provider="static" />
     </div>
 
     <div class="features-text">

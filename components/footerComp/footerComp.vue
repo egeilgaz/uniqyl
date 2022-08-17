@@ -3,7 +3,7 @@
     <div class="footer">
       <div class="footer-rows">
         <div class="footer-row footer-row-1">
-          <nuxt-img src="logo-white.png" alt="logo" />
+          <nuxt-img src="logo-white.png" alt="logo" provider="static" />
 
           <div class="footer-social-links">
             <NuxtLink class="nav-link" to="/">

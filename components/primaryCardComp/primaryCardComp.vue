@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="primary-card">
-      <nuxt-img :src="primaryCard.img" alt="primaryCard" />
+      <nuxt-img :src="primaryCard.img" alt="primaryCard" provider="static" />
       <h4>{{ primaryCard.title }}</h4>
       <p>
         {{ primaryCard.content }}
