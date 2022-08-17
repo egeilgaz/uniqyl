@@ -6,7 +6,7 @@
         e-ticaret mağazasını oluşturun.
       </h1>
       <div class="home-hero-img">
-        <nuxt-img src="home-hero-img.webp" :placeholder="[100, 50, 70]" />
+        <nuxt-img src="home-hero-img.webp" :placeholder="[100, 50, 70]" provider="static" />
       </div>
       <p>
         E-ticaret operasyonlarınızı kolayca yönetin, her şeyi otomatikleştirin
