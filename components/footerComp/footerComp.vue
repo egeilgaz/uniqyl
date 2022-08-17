@@ -7,16 +7,16 @@
 
           <div class="footer-social-links">
             <NuxtLink class="nav-link" to="/">
-              <img src="../../assets/img/facebook.png" alt="facebook" />
+              <img src="../../static/images/facebook.png" alt="facebook" />
             </NuxtLink>
             <NuxtLink class="nav-link" to="/">
-              <img src="../../assets/img/twitter.png" alt="twitter" />
+              <img src="../../static/images/twitter.png" alt="twitter" />
             </NuxtLink>
             <NuxtLink class="nav-link" to="/">
-              <img src="../../assets/img/instagram.png" alt="instagram" />
+              <img src="../../static/images/instagram.png" alt="instagram" />
             </NuxtLink>
             <NuxtLink class="nav-link" to="/">
-              <img src="../../assets/img/youtube.png" alt="youtube" />
+              <img src="../../static/images/youtube.png" alt="youtube" />
             </NuxtLink>
           </div>
         </div>
@@ -51,7 +51,7 @@
         <div class="footer-row footer-row-3">
           <div class="footer-contact">
             <a>
-              <img src="../../assets/img/headphones.png" alt="contact" />
+              <img src="../../static/images/headphones.png" alt="contact" />
               444 44 444
             </a>
             <p>Pazartesi 08.30 - 18.00</p>
@@ -63,7 +63,7 @@
               <button>Türkçe</button>
               <img
                 class="dropbtn"
-                src="../../assets/img/dropdown-arrow.png"
+                src="../../static/images/dropdown-arrow.png"
                 alt="dropdown"
               />
             </div>
@@ -82,7 +82,7 @@
     <div class="footer-bottom">
       © 2022 Mapa | Tüm Hakları Saklıdır.
 
-      <img src="../../assets/img/star.png" alt="star" />
+      <img src="../../static/images/star.png" alt="star" />
     </div>
   </footer>
 </template>

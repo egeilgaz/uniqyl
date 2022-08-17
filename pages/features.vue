@@ -14,7 +14,7 @@
     <!-- Visitor Section -->
     <section class="visitors">
       <div class="container">
-        <img src="../assets/img/visitors.png" alt="visitor" />
+        <img src="../static/images/visitors.png" alt="visitor" />
 
         <div class="visitors-text">
           <h2>Ziyaretçi Segmentasyonu ve Dönüşüm Artırım Araçları</h2>
@@ -45,7 +45,7 @@
     <!-- services section start here -->
     <section class="services">
       <div class="services-img">
-        <img src="../assets/img/e-commerce-img.png" alt="services" />
+        <img src="../static/images/e-commerce-img.png" alt="services" />
       </div>
 
       <div class="services-text">
@@ -65,7 +65,7 @@
     <section class="benefits">
       <div class="benefits-top">
         <div class="benefits-img">
-          <img src="../assets/img/benefits-section-img-2.png" alt="benefits" />
+          <img src="../static/images/benefits-section-img-2.png" alt="benefits" />
         </div>
 
         <div class="benefits-text">

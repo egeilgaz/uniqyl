@@ -51,7 +51,7 @@
             <a href="#" class="btn btn-secondary">Hemen Başla</a>
           </div>
           <div class="features-img">
-            <img src="../../assets/img/features-img-1.png" alt="feature" />
+            <img src="../../static/images/features-img-1.png" alt="feature" />
           </div>
         </div>
         <div v-if="routeName == 'price'" class="features-row">
@@ -60,7 +60,7 @@
             <a href="#" class="btn btn-secondary">Hemen Başla</a>
           </div>
           <div class="features-img">
-            <img src="../../assets/img/price-img.png" alt="price" />
+            <img src="../../static/images/price-img.png" alt="price" />
           </div>
         </div>
       </header>

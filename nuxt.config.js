@@ -31,26 +31,17 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    [
-      "@nuxt/image",
-      {
-        provider: "static",
-        dir: "assets/img",
-      },
-    ],
-  ],
+  buildModules: [],
   image: {
-    dir: "assets/img/",
+    dir: "static/images/",
   },
-  serverMiddleware: {
-    "/_ipx": "~/server/middleware/ipx.js",
-  },
+
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
     "@nuxtjs/style-resources",
+    "@nuxt/image",
     [
       "nuxt-i18n",
       {
