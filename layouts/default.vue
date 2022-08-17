@@ -5,36 +5,42 @@
     <FooterComp />
     <MainModal
       v-if="createModalStatus"
+      :testStatus="testStatus"
       @closeModal="closeModal"
+      @nextPage="nextPage"
       title="Ücretsiz Deneme Sürümünü Başlat"
     >
       <div slot="body">
-        <div v-if="testStatus">
-          <div class="form">
+        <div v-if="testStatus == 1">
+          <div class="register-form">
+            <formElementsInputComp label="Ad" inputType="text" inputSize="sm" />
             <formElementsInputComp
-              label="E-Posta"
-              type="email"
-              inputSize="sm"
-            />
-            <div class="btn btn-primary btn-nav" @click="submit()">Gönder</div>
-            <!-- <formElementsInputComp
-              label="E-Posta"
-              type="email"
+              label="Soyad"
+              inputType="text"
               inputSize="sm"
             />
             <formElementsInputComp
               label="E-Posta"
-              type="email"
+              inputType="email"
               inputSize="sm"
             />
             <formElementsInputComp
-              label="E-Posta"
-              type="email"
+              label="Telefon"
+              inputType="phone"
               inputSize="sm"
-            /> -->
+            />
+            <formElementsInputComp
+              label="Şifre"
+              inputType="password"
+              inputSize="sm"
+            />
+            <formElementsInputComp
+              label="Şifre Tekrarı"
+              inputType="password"
+              inputSize="sm"
+            />
           </div>
-
-          <div class="logo-section">
+          <!-- <div class="logo-section">
             <h4 class="second-title">VEYA</h4>
             <div class="logo-list">
               <div class="logo">
@@ -178,32 +184,65 @@
                 </svg>
               </div>
             </div>
+          </div> -->
+        </div>
+        <div v-else-if="testStatus == 2">
+          <div class="register-form-2">
+            <p>telefonunuza gelen 6 haneli şifreyi giriniz.</p>
+            <CodeInput
+              class="verification"
+              :loading="false"
+              v-on:change="onChange"
+              v-on:complete="onComplete"
+            />
           </div>
         </div>
-        <div v-else>
-          <div class="form-2">
+        <div v-else-if="testStatus == 3">
+          <div class="register-form-3">
             <formElementsInputComp
-              label="E-Posta"
-              type="email"
-              inputSize="sm"
-            />
-            <formElementsInputComp
-              label="E-Posta"
-              type="email"
-              inputSize="sm"
-            />
-            <formElementsInputComp
-              label="E-Posta"
-              type="email"
-              inputSize="sm"
-            />
-            <formElementsInputComp
-              label="E-Posta"
-              type="email"
+              label="Mağaza Adı"
+              inputType="text"
               inputSize="sm"
             />
           </div>
-          <div class="btn btn-primary btn-nav" @click="submit()">Gönder</div>
+        </div>
+        <div v-else-if="testStatus == 4">
+          <div class="register-form-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="50"
+              height="50"
+              viewBox="0 0 172 172"
+              style="fill: #000000"
+            >
+              <g
+                fill="none"
+                fill-rule="nonzero"
+                stroke="none"
+                stroke-width="1"
+                stroke-linecap="butt"
+                stroke-linejoin="miter"
+                stroke-miterlimit="10"
+                stroke-dasharray=""
+                stroke-dashoffset="0"
+                font-family="none"
+                font-weight="none"
+                font-size="none"
+                text-anchor="none"
+                style="mix-blend-mode: normal"
+              >
+                <path d="M0,172v-172h172v172z" fill="none"></path>
+                <g fill="#3498db">
+                  <path
+                    d="M86,6.88c-43.62952,0 -79.12,35.49048 -79.12,79.12c0,43.62952 35.49048,79.12 79.12,79.12c43.62952,0 79.12,-35.49048 79.12,-79.12c0,-15.6864 -4.60863,-30.30871 -12.51031,-42.61703l-4.70984,5.56313c6.5188,10.84976 10.34015,23.5003 10.34015,37.0539c0,39.83176 -32.40824,72.24 -72.24,72.24c-39.83176,0 -72.24,-32.40824 -72.24,-72.24c0,-39.83176 32.40824,-72.24 72.24,-72.24c18.72392,0 35.75504,7.22319 48.60344,18.95359l4.50156,-5.31453c-14.0524,-12.7452 -32.6886,-20.51906 -53.105,-20.51906zM148.73297,26.67344l-66.4686,78.43469l-27.97687,-26.09563l-4.68969,5.03235l33.25109,31.01375l71.13813,-83.93735z"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+            <p>buraya bilgilendirme yazısı gelecek</p>
+          </div>
         </div>
       </div>
     </MainModal>
@@ -212,10 +251,14 @@
 
 <script>
 export default {
+  components: {
+    [process.client && "CodeInput"]: () =>
+      import("vue-verification-code-input"),
+  },
   data() {
     return {
       createModalStatus: false,
-      testStatus: true,
+      testStatus: 1,
     };
   },
   methods: {
@@ -225,14 +268,21 @@ export default {
     closeModal() {
       this.createModalStatus = false;
     },
-    submit() {
-      this.testStatus = false;
+    nextPage(page) {
+      console.log(page);
+      this.testStatus = page;
+    },
+    onChange(v) {
+      console.log("onChange ", v);
+    },
+    onComplete(v) {
+      console.log("onComplete ", v);
     },
   },
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .logo-section {
   margin-top: 30px;
   display: flex;
@@ -241,15 +291,83 @@ export default {
   justify-content: space-around;
 }
 
-.form {
+.register-form {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  justify-content: space-evenly;
   padding: 10px 35px;
   .btn {
     margin-top: 10px;
   }
+  .input-box {
+    padding: 5px;
+  }
+  &-2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px !important;
+    margin-bottom: 65px !important;
+    align-items: center;
+    .verification {
+      margin-top: 20px;
+    }
+  }
+  &-3 {
+    min-height: 90px;
+    position: relative;
+    .input-box {
+      max-width: 250px;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+    }
+  }
+
+  &-4 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+    svg {
+      width: 100px;
+      height: 100px;
+    }
+  }
 }
+
+.react-code-input > input {
+  width: 56px !important;
+}
+
+@media (max-width: 550px) {
+  .react-code-input > input {
+    width: 50px !important;
+  }
+}
+
 @media (max-width: 1250px) {
   .form {
     padding: 10px 0px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .register-form-3 {
+    padding: 10px 100px 50px 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .register-form-3 {
+    padding: 10px 100px 50px 100px;
+  }
+}
+
+
+@media (max-width: 550px) {
+  .register-form-3 {
+    padding: 10px 60px 50px 60px;
   }
 }
 </style>

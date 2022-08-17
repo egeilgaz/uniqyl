@@ -9,7 +9,7 @@
       <header>
         <nav class="nav">
           <NuxtLink class="nav-link" to="/">
-            <nuxt-img src="logo.png" alt="logo" />
+            <nuxt-img src="logo.png" alt="logo" provider="static" />
           </NuxtLink>
           <div class="nav-list" :class="menuStatus ? 'active' : ''">
             <NuxtLink class="nav-link" :to="localePath('features')"> {{$t('features')}} </NuxtLink>

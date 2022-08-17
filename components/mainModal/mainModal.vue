@@ -18,12 +18,16 @@
               ></path>
             </svg>
           </div>
-
           <div class="modal-header" v-if="title">
             <h2>{{ title }}</h2>
           </div>
           <div class="modal-body">
             <slot name="body"></slot>
+            <div class="btn-section">
+              <div class="btn btn-primary btn-nav" @click="$emit('nextPage',testStatus+1)">
+                İleri
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -36,6 +40,9 @@ export default {
   props: {
     title: {
       default: "",
+    },
+    testStatus: {
+      type: Number,
     },
   },
 };
@@ -60,45 +67,55 @@ export default {
   transition: opacity 0.3s ease;
   .btn {
     text-align: center;
+    min-width: 200px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    &-section {
+      position: relative;
+    }
   }
 }
 
-.modal-wrapper {
-  position: relative;
-  margin-left: 22%;
-  margin-right: 22%;
-  margin-top: 40px;
-  overflow: hidden;
-  max-height: calc(100% - 80px);
-}
-
-.modal-container {
-  width: 100%;
-  margin: 0px auto;
-  padding: 2rem 8rem;
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  background-color: #fff;
-  border-radius: 2px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
-  transition: all 0.3s ease;
-  font-family: Helvetica, Arial, sans-serif;
-  position: relative;
-}
-
-.modal-header {
-  text-align: center;
-}
-
-.modal-body {
-  padding: 2rem 3rem;
-  .form {
+.modal {
+  &-wrapper {
+    position: relative;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 40px;
+    max-height: calc(100% - 80px);
+  }
+  &-container {
     width: 100%;
+    margin: 0px auto;
+    padding: 3rem 0;
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
+    justify-items: center;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+    transition: all 0.3s ease;
+    font-family: Helvetica, Arial, sans-serif;
+    position: relative;
+    height: 100%;
+  }
+
+  &-header {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+
+  &-body {
+    padding: 1rem 3rem 2rem 3rem;
+    .form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 
@@ -118,16 +135,6 @@ export default {
 .fade-leave-to {
   opacity: 0;
 }
-
-// .modal-container.modal-container--30 {
-//   width: 30%;
-// }
-// .modal-container.modal-container--50 {
-//   width: 50%;
-// }
-// .modal-container.modal-container--80 {
-//   width: 80%;
-// }
 
 .logo {
   margin-left: 5px;
@@ -158,18 +165,12 @@ export default {
   .btn {
     margin-top: 10px;
   }
-  &-2{
-    margin-bottom:10px;
+  &-2 {
+    margin-bottom: 10px;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 5px;
   }
-  // input{
-  //   max-width: 300px;
-  // }
-  // .btn{
-  //   max-width: 300px;
-  // }
 }
 @media (max-width: 1250px) {
   .form {
@@ -190,37 +191,27 @@ export default {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1080px) {
+  .modal-body {
+    padding: 2rem 3rem;
+  }
   .modal-container {
-    padding: 2rem 6rem;
+    padding: 2rem 4rem;
   }
-}
-
-@media (max-width:880) {
-  .modal-body{
-    padding: 2rem 12rem;
-  }
-  
 }
 
 @media (max-width: 768px) {
   .modal-container {
     padding: 2rem 1rem;
   }
-  .modal-body{
-    padding: 2rem 8rem;
-  }
-}
-
-@media (max-width: 550px) {
-  .modal-body{
+  .modal-body {
     padding: 2rem;
   }
 }
 
-// @media (min-width: 992px) {
-//   .modal-container {
-//     width: 60vw;
-//   }
-// }
+@media (max-width: 550px) {
+  .modal-body {
+    padding: 2rem;
+  }
+}
 </style>
