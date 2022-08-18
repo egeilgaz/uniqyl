@@ -1,71 +1,68 @@
-.primary{
+.primary {
+  &-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
 
-	&-cards{
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-		gap: 24px;
+    row-gap: 45px;
+  }
 
-		row-gap: 45px;
-	}
+  &-card {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
 
-	&-card{
-		display: flex;
-		flex-direction: column;
-		gap: 19px;
+    img {
+      max-width: 50px;
+    }
 
-		img{
-			max-width: 50px;
-		}
+    h4 {
+      font-size: 24px;
+      line-height: 31.25px;
+      color: var(--color-purple);
+    }
 
-		h4{
-			font-size: 24px;
-			line-height: 31.25px;
-			color: var(--color-purple);
-		}
-
-		p{
-			@extend .text-primary;
-			font-size: 18px;
-		}
-	}
-
+    p {
+      @extend .text-primary;
+      font-size: 18px;
+    }
+  }
 }
 
-.reference{
+.reference {
+  &-cards {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 120px;
+    align-items: center;
 
-	&-cards{
-		padding-top: 50px;
-		padding-bottom: 100px;
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-		gap: 120px;
-		align-items: center;
+    @media (max-width: 1500px) {
+      gap: 110px;
+    }
 
-		@media (max-width:1500px) {
-			gap: 110px;
-		}
-		
-		@media (max-width:1200px) {
-			gap: 80px;
-			padding: 70px 0px;
-		}
-		
-		@media (max-width:480px) {
-			grid-template-columns: 1fr;
-			padding: 50px 0px;
-		}
-	}
+    @media (max-width: 1200px) {
+      gap: 80px;
+      padding: 70px 0px;
+    }
 
-	&-card{
-		display: block;
-		object-fit: contain;
-		width: 100%;
-		border-top-left-radius: 7px;
-		border-top-right-radius: 7px;
-		box-shadow: 9px 10px 19px rgba(0, 0, 0, 0.25);
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+      padding: 50px 0px;
+    }
+  }
 
-		img{
-			width: 100%;
-		}
-	}
+  &-card {
+    display: block;
+    object-fit: contain;
+    width: 100%;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    box-shadow: 9px 10px 19px rgba(0, 0, 0, 0.25);
+
+    img {
+      width: 100%;
+    }
+  }
 }

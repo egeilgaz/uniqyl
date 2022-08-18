@@ -1,53 +1,39 @@
 <template>
-  <div v-cloak>
+  <div class="index-page" v-cloak>
     <div class="home-hero">
       <h1>
-        Bugün hayalinizdeki <br />
-        e-ticaret mağazasını oluşturun.
+        {{ $t("indexPage.title1") }}
       </h1>
       <div class="home-hero-img">
         <nuxt-img src="home-hero-img.png" :placeholder="[70]" />
       </div>
       <p>
-        E-ticaret operasyonlarınızı kolayca yönetin, her şeyi otomatikleştirin
-        ve tüm pazaryerlerinde ürünlerinizi sergileyin.
+        {{ $t("indexPage.paragraph1") }}
       </p>
 
-      <formElementsButton buttonName="Mağazamı Oluştur" to="/" />
+      <div class="btn btn-primary" @click="$nuxt.$emit('openModal')">
+        {{ $t("createMyStore") }}
+      </div>
     </div>
 
     <!-- partner section start here -->
     <section class="partners">
       <div class="partners-imgs">
-        <nuxt-img
-          src="yayla-logo.png"
-          alt="yayla"
-          :placeholder="[70]"
-        />
-        <nuxt-img
-          src="unal-logo.png"
-          alt="unal"
-          :placeholder="[70]"
-        />
-        <nuxt-img
-          src="matex-logo.png"
-          alt="matex"
-          :placeholder="[70]"
-        />
-        <nuxt-img
-          src="oskar-logo.png"
-          alt="oskar"
-          :placeholder="[70]"
-        />
+        <nuxt-img src="yayla-logo.png" alt="yayla" :placeholder="[70]" />
+        <nuxt-img src="unal-logo.png" alt="unal" :placeholder="[70]" />
+        <nuxt-img src="matex-logo.png" alt="matex" :placeholder="[70]" />
+        <nuxt-img src="oskar-logo.png" alt="oskar" :placeholder="[70]" />
       </div>
-      <NuxtLink class="partners-link" to="/"> ve çok daha fazlası + </NuxtLink>
+      <div class="partners-link" @click="$nuxt.$emit('openModal')">
+        {{ $t("andMuchMore") }}
+      </div>
     </section>
 
     <!-- features section start here -->
     <section class="features">
       <div class="container">
         <h1 class="heading-primary">
-          Mağazanızın yönetiminde <br />güçlü özelliklere sahip olun
+          {{ $t("indexPage.title2") }}
         </h1>
 
         <featuresComp
@@ -66,14 +52,11 @@
 
       <div class="services-text">
         <h1>
-          Tasarımıyla göz kamaştıran <br />
-          bir e-ticaret sitesine sahip olun.
+          {{ $t("indexPage.title3") }}
         </h1>
 
         <p>
-          Özenle hazırlanan e-ticaret tema şablonlarından birisini seçin veya
-          özel olarak hazırlanmasını istediğiniz temanızla tüm platformlarda
-          ziyaretçilerinizi karşılayın.
+          {{ $t("indexPage.paragraph2") }}
         </p>
 
         <div class="services-benefits">
@@ -95,13 +78,10 @@
 
         <div class="benefits-text">
           <h1>
-            Tek bir tuşla <br />
-            tüm işlerinizi hızlıca çözün.
+            {{ $t("indexPage.title4") }}
           </h1>
           <p>
-            Toplu ürün yükleyin, siparişlerinizi takip edin, muhasebe
-            programlarına verilerinizi gönderin ve tüm operasyonlarınızın
-            kullanım kolaylığını keşfedin.
+            {{ $t("indexPage.paragraph3") }}
           </p>
         </div>
       </div>
@@ -114,13 +94,15 @@
         />
       </div>
 
-      <formElementsButton buttonName="Mağazamı Oluştur" to="/" />
+      <div class="btn btn-primary" @click="$nuxt.$emit('openModal')">
+        {{ $t("createMyStore") }}
+      </div>
     </section>
 
     <!-- testimonail section start here -->
 
     <section class="testimonial">
-      <slider :autoplay="false" animation="fade" height="775px">
+      <slider :autoplay="false" animation="fade" height="690px">
         <slider-item v-for="(i, index) in list" :key="index" :style="i">
           <div class="testimonial-slide">
             <div class="testimonial-img">
@@ -137,7 +119,7 @@
               <div class="testimonial-person">
                 <h3>{{ i.userName }}</h3>
                 <p>{{ i.companyName }}</p>
-                <img  :src="getImgUrl(i.companyImg)" alt="companyImg" />
+                <img :src="getImgUrl(i.companyImg)" alt="companyImg" />
               </div>
 
               <div class="count">
@@ -160,6 +142,7 @@ export default {
     return {
       isLoaded: false,
       height: 550,
+      windowHeight: process.client ? window.innerHeight : null,
       features: [
         {
           id: 1,
@@ -309,9 +292,22 @@ export default {
       ],
     };
   },
+  mounted() {
+    this.$nextTick(() => {
+      window.addEventListener("resize", this.onResize);
+    });
+  },
+
+  beforeDestroy() {
+    window.removeEventListener("resize", this.onResize);
+  },
   methods: {
     onImgLoad() {
       this.isLoaded = true;
+    },
+    onResize() {
+      this.windowHeight = window.innerHeight;
+      console.log(this.windowHeight)
     },
   },
 };

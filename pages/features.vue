@@ -69,10 +69,9 @@
         </div>
 
         <div class="benefits-text">
-          
           <titleComp :title="title2" />
 
-          <a href="#" class="btn-secondary">{{$t('createMyStore')}}</a>
+          <a href="#" class="btn-secondary">{{ $t("createMyStore") }}</a>
         </div>
       </div>
 
@@ -84,13 +83,16 @@
         />
       </div>
 
-      <a href="#" class="btn btn-primary">{{$t('createMyStore')}}</a>
+      <a href="#" class="btn btn-primary">{{ $t("createMyStore") }}</a>
     </section>
   </div>
 </template>
 
 <script>
 export default {
+  meta: {
+    name:"features"
+  },
   data() {
     return {
       primaryCards: [

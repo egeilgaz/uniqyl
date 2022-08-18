@@ -7,6 +7,10 @@ header {
   position: relative;
 }
 
+.header-bg-color {
+  background-color: var(--color-white-5);
+}
+
 .nav {
   display: flex;
   align-items: center;

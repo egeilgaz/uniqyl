@@ -6,6 +6,9 @@
 }
 
 .story {
+  &.story-reverse {
+    flex-direction: row-reverse;
+  }
   display: flex;
   align-items: center;
   margin-bottom: 100px;

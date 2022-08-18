@@ -30,13 +30,13 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: ["nuxt-route-meta"],
 
   serverMiddleware: {
-    '/_ipx': '~/server/middleware/ipx.js'
+    "/_ipx": "~/server/middleware/ipx.js",
   },
   static: {
-    prefix: false
+    prefix: false,
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -59,10 +59,6 @@ export default {
         },
         parsePages: false,
         pages: {
-          price: {
-            tr: "/fiyatlar",
-            en: "/prices",
-          },
           features: {
             tr: "/ozellikler",
             en: "/features",
@@ -82,6 +78,10 @@ export default {
           questions: {
             tr: "/sorular",
             en: "/questions",
+          },
+          price: {
+            tr: "/fiyatlar",
+            en: "/prices",
           },
           stories: {
             tr: "/basari-hikayeleri",

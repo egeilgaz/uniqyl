@@ -261,6 +261,11 @@ export default {
       testStatus: 1,
     };
   },
+  created() {
+    this.$nuxt.$on("openModal", () => {
+      this.createModalStatus = true;
+    });
+  },
   methods: {
     openModal() {
       this.createModalStatus = true;
@@ -269,7 +274,6 @@ export default {
       this.createModalStatus = false;
     },
     nextPage(page) {
-      console.log(page);
       this.testStatus = page;
     },
     onChange(v) {
@@ -281,96 +285,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-.logo-section {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.register-form {
-  display: grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  justify-content: space-evenly;
-  padding: 10px 35px;
-  .btn {
-    margin-top: 10px;
-  }
-  .input-box {
-    padding: 5px;
-  }
-  &-2 {
-    display: flex;
-    flex-direction: column;
-    margin-top: 35px !important;
-    margin-bottom: 65px !important;
-    align-items: center;
-    .verification {
-      margin-top: 20px;
-    }
-  }
-  &-3 {
-    min-height: 90px;
-    position: relative;
-    .input-box {
-      max-width: 250px;
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%);
-    }
-  }
-
-  &-4 {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 25px;
-    svg {
-      width: 100px;
-      height: 100px;
-    }
-  }
-}
-
-.react-code-input > input {
-  width: 56px !important;
-}
-
-@media (max-width: 550px) {
-  .verification {
-    width: 300px;
-  }
-  .react-code-input > input {
-    width: 50px !important;
-  }
-}
-
-@media (max-width: 1250px) {
-  .form {
-    padding: 10px 0px;
-  }
-}
-
-@media (max-width: 1080px) {
-  .register-form-3 {
-    padding: 10px 100px 50px 100px;
-  }
-}
-
-@media (max-width: 768px) {
-  .register-form-3 {
-    padding: 10px 100px 50px 100px;
-  }
-}
-
-
-@media (max-width: 550px) {
-  .register-form-3 {
-    padding: 10px 60px 50px 60px;
-  }
-}
-</style>

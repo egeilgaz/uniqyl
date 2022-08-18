@@ -20,10 +20,6 @@
     gap: 25px;
   }
 
-  // @media (max-width:390px) {
-  // 	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  // 	width: 100%;
-  // }
 }
 
 .input-box {
@@ -65,7 +61,7 @@
   }
 
   .sm-label {
-	font-size:12px;
+    font-size: 12px;
   }
 
   textarea {

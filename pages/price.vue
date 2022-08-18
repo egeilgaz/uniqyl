@@ -41,6 +41,9 @@
 
 <script>
 export default {
+  meta: {
+    name:"price"
+  },
   data() {
     return {
       title2: {

@@ -1,26 +1,3 @@
-.container {
-  max-width: 1140px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.container-2 {
-  max-width: 1360px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.wrapper {
-  width: 100vw !important;
-  overflow-x: hidden;
-
-  .footer-bottom {
-    margin-top: 0;
-  }
-}
-
 // abstract files here
 @import "abstract/typography";
 @import "abstract/variables";
@@ -37,6 +14,8 @@
 @import "components/testimonial";
 @import "components/hero";
 @import "components/form";
+@import "components/mainModal";
+@import "components/titleComp";
 
 //page files here
 @import "page/home";
@@ -47,3 +26,6 @@
 @import "page/question";
 @import "page/contact-us";
 @import "page/price-page";
+
+//layout files here
+@import "layouts/base";

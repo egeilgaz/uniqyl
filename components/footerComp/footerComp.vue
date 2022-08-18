@@ -99,9 +99,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.footer-bottom {
-  margin-top: 0px;
-}
-</style>

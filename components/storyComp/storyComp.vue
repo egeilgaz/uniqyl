@@ -37,9 +37,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.story-reverse {
-  flex-direction: row-reverse;
-}
-</style>

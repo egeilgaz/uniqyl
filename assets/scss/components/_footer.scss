@@ -1,260 +1,258 @@
-.footer{
-	background-color: var(--color-black);
-	padding: 41px 110px ;
+.footer {
+  background-color: var(--color-black);
+  padding: 41px 110px;
 
-	padding-bottom: 0;
+  padding-bottom: 0;
 
-	@media (max-width:1500px) {
-		padding: 41px 20px;
-	}
+  @media (max-width: 1500px) {
+    padding: 41px 20px;
+  }
 
-	&-rows{
-		display: flex;
-		justify-content: space-between;
+  &-rows {
+    display: flex;
+    justify-content: space-between;
 
-		@media (max-width:1000px) {
-			flex-wrap: wrap;
-			gap: 60px;
-			align-items: center;
-			justify-content: center;
-			row-gap: 40px;
-		}
+    @media (max-width: 1000px) {
+      flex-wrap: wrap;
+      gap: 60px;
+      align-items: center;
+      justify-content: center;
+      row-gap: 40px;
+    }
 
-		
-		@media (max-width:733px) {
-			
-			justify-content: flex-start;
-		}
-	}
+    @media (max-width: 733px) {
+      justify-content: flex-start;
+    }
+  }
 
-	&-row{
-		display: flex;
-		flex-direction: column;
+  &-row {
+    display: flex;
+    flex-direction: column;
 
-		&-1{
-			gap: 78px;
+    &-1 {
+      gap: 78px;
 
-			img{
-				align-self: flex-start;
-			}
+      img {
+        align-self: flex-start;
+      }
 
-			@media (max-width:733px) {
-				row-gap: 30px;
-				align-self: flex-start;
-			}
-		}
+      @media (max-width: 733px) {
+        row-gap: 30px;
+        align-self: flex-start;
+      }
+    }
 
-		&-2{
-			display: flex;
-			flex-direction: row;
-			gap: 145px;
+    &-2 {
+      display: flex;
+      flex-direction: row;
+      gap: 145px;
 
-			@media (max-width:1250px) {
-				gap: 100px;
-			}
-			
-			@media (max-width:1150px) {
-				gap: 50px;
-			}
+      @media (max-width: 1250px) {
+        gap: 100px;
+      }
 
-			@media (max-width:733px) {
-				width: 100%;
-				justify-content: space-between;
-			}
+      @media (max-width: 1150px) {
+        gap: 50px;
+      }
 
-			@media (max-width:490px) {
-				flex-direction: column;
-				gap: 35px;
-			}
-		}
+      @media (max-width: 733px) {
+        width: 100%;
+        justify-content: space-between;
+      }
 
-		&-3{
-			@media (max-width:733px) {
-				width: 100%;
-				align-items: center;
-				flex-direction: row !important;
-				justify-content: space-between;
+      @media (max-width: 490px) {
+        flex-direction: column;
+        gap: 35px;
+      }
+    }
 
-				.dropdown{
-					margin-top: 0;
-				}
-			}
+    &-3 {
+      @media (max-width: 733px) {
+        width: 100%;
+        align-items: center;
+        flex-direction: row !important;
+        justify-content: space-between;
 
-			@media (max-width:390px) {
-				flex-direction: column !important;
+        .dropdown {
+          margin-top: 0;
+        }
+      }
 
-				align-items: flex-start;
-				row-gap: 30px;
-			}
+      @media (max-width: 390px) {
+        flex-direction: column !important;
 
-		}
-	}
+        align-items: flex-start;
+        row-gap: 30px;
+      }
+    }
+  }
 
-	&-social-links{
-		display: flex;
-		align-items: center;
-		gap: 35px;
+  &-social-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
 
-		a{
-			display: block;
-		}
-	}
+    a {
+      display: block;
+    }
+  }
 
-	&-links{
-		display: flex;
-		flex-direction: column;
-		gap: 12px;
+  &-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 
-		h4{
-			font-size: 17px;
-			font-weight: 500;
-			line-height: 22px;
-			color: var(--color-white);
-			margin-bottom: 2px;
-		}
+    h4 {
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 22px;
+      color: var(--color-white);
+      margin-bottom: 2px;
+    }
 
-		a{
-			color: var(--color-grey-light);
-			transition: all 0.3s ease;
-			&:hover{
-				color: var(--color-white);
-			}
-		}
-	}	
+    a {
+      color: var(--color-grey-light);
+      transition: all 0.3s ease;
+      &:hover {
+        color: var(--color-white);
+      }
+    }
+  }
 
-	&-contact{
-		color: var(--color-white);
-		text-align: right;
+  &-contact {
+    color: var(--color-white);
+    text-align: right;
 
-		>a{
-			display: flex;
-			align-items: center;
-			font-size: 18.50px;
-			font-weight: 700;
-			gap: 5px;
-			margin-bottom: 10px;
-			justify-content: flex-end;
-			cursor: pointer;
-			transition: all 0.3s ease;
-			&:hover{
-				color: var(--color-purple);
-			}
+    > a {
+      display: flex;
+      align-items: center;
+      font-size: 18.5px;
+      font-weight: 700;
+      gap: 5px;
+      margin-bottom: 10px;
+      justify-content: flex-end;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      &:hover {
+        color: var(--color-purple);
+      }
+    }
 
-		}
+    p {
+      font-size: 10px;
+      font-weight: 400;
+    }
+  }
 
-		p{
-			font-size: 10px;
-			font-weight: 400;
-		
-		}
-	}
+  &-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0px;
 
-	&-bottom{
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		
-		@extend .text-primary;
-		color: var(--color-white);
-		font-size: 14px;
-		background-color: var(--color-black);
+    @extend .text-primary;
+    color: var(--color-white);
+    font-size: 14px;
+    background-color: var(--color-black);
 
-		padding: 20px 114px;
+    padding: 20px 114px;
 
-		@media (max-width:1500px) {
-			padding: 20px;
-		}
-	}
-	
+    @media (max-width: 1500px) {
+      padding: 20px;
+    }
+  }
 }
 
+.wrapper {
+  .footer-bottom {
+    margin-top: 0;
+  }
+}
 
+.dropdown {
+  margin-top: 50px;
+  max-width: 220px;
+  width: 100%;
 
+  @media (max-width: 733px) {
+    width: 180px;
+  }
 
-.dropdown{
-	margin-top: 50px;
-	max-width: 220px;
-	width: 100%;
-
-	@media (max-width:733px) {
-		width: 180px;
-	}
-
-	@media (max-width:390px) {
-		align-self: flex-end;
-	}
-	
+  @media (max-width: 390px) {
+    align-self: flex-end;
+  }
 }
 
 .dropbtn {
-	cursor: pointer;
-}
-  
-  /* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-	background-color: transparent;
+  cursor: pointer;
 }
 
-  /* Dropdown Content (Hidden by Default) */
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: transparent;
+}
+
+/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: #f1f1f1;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	z-index: 1;
-	// top: 205%;
-	margin-top: -140px;
-	margin-left: 30px;
-	// max-width: 100%;
-	width: 150px;
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  // top: 205%;
+  margin-top: -140px;
+  margin-left: 30px;
+  // max-width: 100%;
+  width: 150px;
 }
-  
-  /* Links inside the dropdown */
+
+/* Links inside the dropdown */
 .dropdown-content a {
-	color: black;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
-  
-  /* Change color of dropdown links on hover */
+
+/* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-	background-color: #ddd
+  background-color: #ddd;
 }
-  
-  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
-	display:block;
+  display: block;
 }
 
-.dropdown-box{
-	background-color: transparent;
-	padding: 13px 21px;
-	font-size: 18.16px;
-	font-weight: 700;
-	
-	border: 1px solid var(--color-white);
-	max-width: 220px;
-	width: 220px;
-	
-	border-radius: 47px;
+.dropdown-box {
+  background-color: transparent;
+  padding: 13px 21px;
+  font-size: 18.16px;
+  font-weight: 700;
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 40px;
-	position: relative;
+  border: 1px solid var(--color-white);
+  max-width: 220px;
+  width: 220px;
 
-	@media (max-width:733px) {
-		width: 180px;
-	}
+  border-radius: 47px;
 
-	button{
-		background-color: transparent;
-		outline: none;
-		border: none;
-		font: inherit;
-		color: white;
-		display: block;
-	}
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  position: relative;
+
+  @media (max-width: 733px) {
+    width: 180px;
+  }
+
+  button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font: inherit;
+    color: white;
+    display: block;
+  }
 }

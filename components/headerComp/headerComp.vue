@@ -5,7 +5,7 @@
       routeName == 'price' ? 'features-page price-page' : null,
     ]"
   >
-    <div style="background-color: var(--color-white-5)">
+    <div class="header-bg-color">
       <header>
         <nav class="nav">
           <NuxtLink class="nav-link" to="/">
@@ -36,7 +36,7 @@
         </nav>
         <div
           v-if="routeName == 'features'"
-          class="features-row features-row-10"
+          class="features-row features-row-1"
         >
           <div class="features-text">
             <h1>
@@ -82,7 +82,7 @@ export default {
   },
   computed: {
     routeName() {
-      let routeName = this.$route.name;
+      let routeName = this.$route.meta.name;
       return routeName;
     },
   },

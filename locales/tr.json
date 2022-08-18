@@ -2,5 +2,15 @@
   "features": "Özellikler",
   "prices": "Fiyatlar",
   "references": "Referanslar",
-  "createMyStore":"Mağazamı Oluştur"
+  "createMyStore": "Mağazamı Oluştur",
+  "andMuchMore":"ve çok daha fazlası +",
+  "indexPage": {
+    "title1": "Bugün hayalinizdeki e-ticaret mağazasını oluşturun.",
+    "paragraph1": "E-ticaret operasyonlarınızı kolayca yönetin, her şeyi otomatikleştirin ve tüm pazaryerlerinde ürünlerinizi sergileyin.",
+    "title2": "Mağazanızın yönetiminde güçlü özelliklere sahip olun",
+    "title3":"Tasarımıyla göz kamaştıran bir e-ticaret sitesine sahip olun.",
+    "paragraph2":"Özenle hazırlanan e-ticaret tema şablonlarından birisini seçin veya özel olarak hazırlanmasını istediğiniz temanızla tüm platformlarda ziyaretçilerinizi karşılayın.",
+    "title4":"Tek bir tuşla tüm işlerinizi hızlıca çözün.",
+    "paragraph3" : "Toplu ürün yükleyin, siparişlerinizi takip edin, muhasebe programlarına verilerinizi gönderin ve tüm operasyonlarınızın kullanım kolaylığını keşfedin."
+  }
 }

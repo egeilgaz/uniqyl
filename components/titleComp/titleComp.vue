@@ -19,9 +19,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.bg-color {
-  background-color: var(--color-white-5);
-}
-</style>
