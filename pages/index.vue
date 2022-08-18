@@ -23,25 +23,21 @@
           src="yayla-logo.png"
           alt="yayla"
           :placeholder="[70]"
-          provider="static"
         />
         <nuxt-img
           src="unal-logo.png"
           alt="unal"
           :placeholder="[70]"
-          provider="static"
         />
         <nuxt-img
           src="matex-logo.png"
           alt="matex"
           :placeholder="[70]"
-          provider="static"
         />
         <nuxt-img
           src="oskar-logo.png"
           alt="oskar"
           :placeholder="[70]"
-          provider="static"
         />
       </div>
       <NuxtLink class="partners-link" to="/"> ve çok daha fazlası + </NuxtLink>
@@ -65,7 +61,7 @@
     <!-- services section start here -->
     <section class="services">
       <div class="services-img">
-        <nuxt-img src="e-commerce-img.png" alt="e-commerce" provider="static" />
+        <nuxt-img src="e-commerce-img.png" alt="e-commerce" />
       </div>
 
       <div class="services-text">
@@ -94,7 +90,7 @@
     <section class="benefits">
       <div class="benefits-top">
         <div class="benefits-img">
-          <nuxt-img src="benefits-section-img.png" alt="benefit" provider="static" />
+          <nuxt-img src="benefits-section-img.png" alt="benefit" />
         </div>
 
         <div class="benefits-text">

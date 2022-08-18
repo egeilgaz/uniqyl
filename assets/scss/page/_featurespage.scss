@@ -24,7 +24,7 @@
     justify-content: flex-start;
 
     &::after {
-      //background-image: url(../../../static/images/right-arrow-blue.png);
+      //background-image: url(../../../static/right-arrow-blue.png);
     }
 
     &::after:hover {
@@ -340,7 +340,7 @@
         border: none;
         margin-top: 55px;
         &::after {
-         // background-image: url(../../../static/images/right-arrow-purple.png);
+         //background-image: url(../../../static/right-arrow-purple.png);
         }
 
         &:hover {

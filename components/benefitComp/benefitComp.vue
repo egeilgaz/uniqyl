@@ -1,6 +1,6 @@
 <template>
   <div class="benefit">
-    <nuxt-img :src="benefit.img" alt="benefitIcon" :placeholder="[70]" provider="static" />
+    <nuxt-img :src="benefit.img" alt="benefitIcon" :placeholder="[70]" />
     <div class="benefit-text">
       <h4>{{ benefit.title }}</h4>
       <p>
