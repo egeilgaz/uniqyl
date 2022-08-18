@@ -341,6 +341,9 @@ export default {
 }
 
 @media (max-width: 550px) {
+  .verification {
+    width: 300px;
+  }
   .react-code-input > input {
     width: 50px !important;
   }

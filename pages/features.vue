@@ -72,7 +72,7 @@
           
           <titleComp :title="title2" />
 
-          <a href="#" class="btn-secondary">Mağazamı Oluştur</a>
+          <a href="#" class="btn-secondary">{{$t('createMyStore')}}</a>
         </div>
       </div>
 
@@ -84,7 +84,7 @@
         />
       </div>
 
-      <a href="#" class="btn btn-primary">Mağazamı Oluştur</a>
+      <a href="#" class="btn btn-primary">{{$t('createMyStore')}}</a>
     </section>
   </div>
 </template>

@@ -9,14 +9,14 @@
       <header>
         <nav class="nav">
           <NuxtLink class="nav-link" to="/">
-            <nuxt-img src="logo.png" alt="logo" provider="static" />
+            <nuxt-img src="logo.png" alt="logo" />
           </NuxtLink>
           <div class="nav-list" :class="menuStatus ? 'active' : ''">
             <NuxtLink class="nav-link" :to="localePath('features')"> {{$t('features')}} </NuxtLink>
             <NuxtLink class="nav-link" :to="localePath('price')"> {{$t('prices')}} </NuxtLink>
             <NuxtLink class="nav-link" :to="localePath('references')"> {{$t('references')}} </NuxtLink>
             <div class="btn btn-primary btn-nav" @click="$emit('openModal')">
-              Mağazamı Oluştur
+             {{$t('createMyStore')}}
             </div>
           </div>
           <div class="nav-btn" id="navbtn" @click="openMenu">

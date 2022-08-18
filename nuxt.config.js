@@ -19,11 +19,6 @@ export default {
       },
     ],
   },
-  generate: {
-    cache: {
-      ignore: false
-    }
-  },
   router: {},
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["~/assets/scss/main.scss"],
@@ -39,6 +34,9 @@ export default {
 
   serverMiddleware: {
     '/_ipx': '~/server/middleware/ipx.js'
+  },
+  static: {
+    prefix: false
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules

@@ -9,7 +9,7 @@
       </p>
     </div>
 
-    <a href="#" class="btn-secondary">Mağazamı Oluştur</a>
+    <a href="#" class="btn-secondary">{{$t('createMyStore')}}</a>
   </div>
 </template>
 
