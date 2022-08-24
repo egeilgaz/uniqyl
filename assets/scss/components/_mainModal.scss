@@ -109,19 +109,6 @@
   justify-content: space-around;
 }
 
-.form {
-  padding: 10px 35px;
-  .btn {
-    margin-top: 10px;
-  }
-  &-2 {
-    margin-bottom: 10px;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 5px;
-  }
-}
-
 .logo-section {
   margin-top: 30px;
   display: flex;

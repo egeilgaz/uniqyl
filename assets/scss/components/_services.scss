@@ -105,16 +105,11 @@
   &-benefits {
     display: flex;
     flex-direction: column;
-    row-gap: 60px;
-
-    @media (max-width: 700px) {
-      row-gap: 50px;
-    }
 
     .benefit {
       display: flex;
       align-items: center;
-      gap: 30px;
+      margin-bottom: 45px;
 
       max-width: 787px;
 
@@ -129,7 +124,6 @@
       @media (max-width: 700px) {
         flex-direction: column;
         align-items: flex-start;
-        gap: 20px;
       }
 
       img {
@@ -138,6 +132,12 @@
       }
 
       &-text {
+        margin-left: 30px;
+
+        @media (max-width: 700px) {
+          margin-left: 0;
+        }
+        
         h4 {
           font-size: 30px;
           line-height: 39px;

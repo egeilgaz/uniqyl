@@ -7,6 +7,9 @@
         {{ benefit.content }}
       </p>
     </div>
+    <div class="btn-secondary" @click="$nuxt.$emit('openModal')">
+      {{ $t("createMyStore") }}
+    </div>
   </div>
 </template>
 <script>

@@ -54,16 +54,6 @@ export default {
         title: "Paket Özelliklerini Karşılaştırın",
         content: "Size uygun paketi seçin, denemeye hemen başlayın.",
       },
-      tabs: [
-        {
-          id: 1,
-          tabData: "montly",
-        },
-        {
-          id: 2,
-          tabData: "yearly",
-        },
-      ],
       prices: [
         {
           id: 1,
@@ -280,12 +270,12 @@ export default {
       tabs: [
         {
           id: 1,
-          title: "Aylık",
+          title: this.$t('monthly'),
           active: true,
         },
         {
           id: 2,
-          title: "Yıllık",
+          title: this.$t('yearly'),
           active: false,
         },
       ],

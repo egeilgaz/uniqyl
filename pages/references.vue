@@ -10,7 +10,9 @@
             :card="reference"
           />
         </div>
-        <formElementsButton buttonName="Mağazamı Oluştur" to="/" />
+        <div class="btn btn-primary" @click="$nuxt.$emit('openModal')">
+          {{ $t("createMyStore") }}
+        </div>
       </div>
     </div>
   </div>

@@ -25,7 +25,7 @@
             <slot name="body"></slot>
             <div class="btn-section">
               <div class="btn btn-primary btn-nav" @click="$emit('nextPage',testStatus+1)">
-                İleri
+               {{ testStatus == 4 ? $t('okay') : $t('next') }}
               </div>
             </div>
           </div>

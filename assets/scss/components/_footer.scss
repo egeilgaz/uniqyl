@@ -14,10 +14,10 @@
 
     @media (max-width: 1000px) {
       flex-wrap: wrap;
-      gap: 60px;
+      //gap: 60px;
       align-items: center;
       justify-content: center;
-      row-gap: 40px;
+      //row-gap: 40px;
     }
 
     @media (max-width: 733px) {
@@ -28,16 +28,15 @@
   &-row {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
 
     &-1 {
-      gap: 78px;
-
       img {
         align-self: flex-start;
       }
 
       @media (max-width: 733px) {
-        row-gap: 30px;
+        //row-gap: 30px;
         align-self: flex-start;
       }
     }
@@ -45,14 +44,21 @@
     &-2 {
       display: flex;
       flex-direction: row;
-      gap: 145px;
+      margin-top: 50px;
 
-      @media (max-width: 1250px) {
-        gap: 100px;
-      }
+      .footer-links {
+        margin: 0 60px;
+        @media (max-width: 1200px) {
+          margin: 0 30px;
+        }
 
-      @media (max-width: 1150px) {
-        gap: 50px;
+        @media (max-width: 1050px) {
+          margin: 0 10px;
+        }
+
+        @media (max-width: 490px) {
+          flex-direction: column;
+        }
       }
 
       @media (max-width: 733px) {
@@ -62,7 +68,6 @@
 
       @media (max-width: 490px) {
         flex-direction: column;
-        gap: 35px;
       }
     }
 
@@ -82,7 +87,7 @@
         flex-direction: column !important;
 
         align-items: flex-start;
-        row-gap: 30px;
+        //row-gap: 30px;
       }
     }
   }
@@ -90,24 +95,24 @@
   &-social-links {
     display: flex;
     align-items: center;
-    gap: 35px;
 
     a {
       display: block;
+      margin-left: 0;
+      margin-right: 40px;
     }
   }
 
   &-links {
     display: flex;
     flex-direction: column;
-    gap: 12px;
 
     h4 {
       font-size: 17px;
       font-weight: 500;
       line-height: 22px;
       color: var(--color-white);
-      margin-bottom: 2px;
+      margin-bottom: 15px;
     }
 
     a {
@@ -116,19 +121,20 @@
       &:hover {
         color: var(--color-white);
       }
+      margin-bottom: 10px;
     }
   }
 
   &-contact {
     color: var(--color-white);
     text-align: right;
+    margin-bottom: 10px;
 
     > a {
       display: flex;
       align-items: center;
       font-size: 18.5px;
       font-weight: 700;
-      gap: 5px;
       margin-bottom: 10px;
       justify-content: flex-end;
       cursor: pointer;
@@ -240,7 +246,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
   position: relative;
 
   @media (max-width: 733px) {
@@ -254,5 +259,6 @@
     font: inherit;
     color: white;
     display: block;
+    margin-right: 5px;
   }
 }

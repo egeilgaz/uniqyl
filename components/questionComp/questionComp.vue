@@ -1,11 +1,11 @@
 <template>
-  <div class="faq"  @click="$emit('showAnswer')">
+  <div class="faq">
     <!-- faq question -->
-    <h1 class="faq-page">
+    <h1 class="faq-page" @click="$emit('showAnswer')">
       <span> {{ question.title }} </span>
     </h1>
     <!-- faq answer -->
-    <div v-if="showAnswer" class="faq-body">
+    <div class="faq-body" :style="showAnswer ? 'height:100px;' : null">
       <p>
         {{ question.answer }}
       </p>
@@ -20,7 +20,7 @@ export default {
       type: Object,
       default: () => {},
     },
-    showAnswer: false
+    showAnswer: false,
   },
 };
 </script>

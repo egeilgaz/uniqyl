@@ -14,7 +14,7 @@
     <!-- Visitor Section -->
     <section class="visitors">
       <div class="container">
-        <img src="../static/visitors.png" alt="visitor" />
+        <nuxt-img src="visitors.png" alt="visitor" :placeholder="[95]" />
 
         <div class="visitors-text">
           <h2>Ziyaretçi Segmentasyonu ve Dönüşüm Artırım Araçları</h2>
@@ -26,7 +26,9 @@
               kategorileri sayfa sıralamasında üstlere taşıyoruz.
             </p>
 
-            <a href="#!" class="btn btn-secondary">Hemen Başla</a>
+            <div class="btn btn-secondary" @click="$nuxt.$emit('openModal')">
+              {{ $t("startNow") }}
+            </div>
           </div>
         </div>
       </div>
@@ -45,7 +47,7 @@
     <!-- services section start here -->
     <section class="services">
       <div class="services-img">
-        <img src="../static/e-commerce-img.png" alt="services" />
+        <nuxt-img src="e-commerce-img.png" alt="services"/>
       </div>
 
       <div class="services-text">
@@ -65,13 +67,15 @@
     <section class="benefits">
       <div class="benefits-top">
         <div class="benefits-img">
-          <img src="../static/benefits-section-img-2.png" alt="benefits" />
+          <nuxt-img src="benefits-section-img-2.png" alt="benefits" />
         </div>
 
         <div class="benefits-text">
           <titleComp :title="title2" />
 
-          <a href="#" class="btn-secondary">{{ $t("createMyStore") }}</a>
+          <div class="btn-secondary" @click="$nuxt.$emit('openModal')">
+            {{ $t("createMyStore") }}
+          </div>
         </div>
       </div>
 
@@ -83,7 +87,9 @@
         />
       </div>
 
-      <a href="#" class="btn btn-primary">{{ $t("createMyStore") }}</a>
+      <div class="btn btn-primary" @click="$nuxt.$emit('openModal')">
+        {{ $t("createMyStore") }}
+      </div>
     </section>
   </div>
 </template>
@@ -91,7 +97,7 @@
 <script>
 export default {
   meta: {
-    name:"features"
+    name: "features",
   },
   data() {
     return {

@@ -8,34 +8,38 @@
       :testStatus="testStatus"
       @closeModal="closeModal"
       @nextPage="nextPage"
-      title="Ücretsiz Deneme Sürümünü Başlat"
+      :title="$t('startFreeTrial')"
     >
       <div slot="body">
         <div v-if="testStatus == 1">
           <div class="register-form">
-            <formElementsInputComp label="Ad" inputType="text" inputSize="sm" />
             <formElementsInputComp
-              label="Soyad"
+              :label="$t('name')"
               inputType="text"
               inputSize="sm"
             />
             <formElementsInputComp
-              label="E-Posta"
+              :label="$t('surname')"
+              inputType="text"
+              inputSize="sm"
+            />
+            <formElementsInputComp
+              :label="$t('email')"
               inputType="email"
               inputSize="sm"
             />
             <formElementsInputComp
-              label="Telefon"
+              :label="$t('phone')"
               inputType="phone"
               inputSize="sm"
             />
             <formElementsInputComp
-              label="Şifre"
+              :label="$t('password')"
               inputType="password"
               inputSize="sm"
             />
             <formElementsInputComp
-              label="Şifre Tekrarı"
+              :label="$t('confirmPassword')"
               inputType="password"
               inputSize="sm"
             />
@@ -200,7 +204,7 @@
         <div v-else-if="testStatus == 3">
           <div class="register-form-3">
             <formElementsInputComp
-              label="Mağaza Adı"
+              :label="$t('storeName')"
               inputType="text"
               inputSize="sm"
             />
@@ -261,6 +265,11 @@ export default {
       testStatus: 1,
     };
   },
+  beforeCreate() {
+    if (process.client) {
+      window.scrollTo(0, 0);
+    }
+  },
   created() {
     this.$nuxt.$on("openModal", () => {
       this.createModalStatus = true;
@@ -275,6 +284,9 @@ export default {
     },
     nextPage(page) {
       this.testStatus = page;
+      if (this.testStatus == 5) {
+        this.closeModal();
+      }
     },
     onChange(v) {
       console.log("onChange ", v);

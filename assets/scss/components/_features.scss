@@ -11,10 +11,12 @@
 
   &-row-reverse {
     flex-direction: row-reverse;
+    .features-img{
+      padding-left: 15px;
+    }
 
     @media (max-width: 950px) {
       flex-direction: column;
-      gap: 30px;
       margin-top: 60px;
     }
   }
@@ -22,7 +24,9 @@
   &-row {
     display: flex;
     align-items: center;
-	gap:100px;
+    .features-img{
+      padding-right: 15px;
+    }
 
     @media (max-width: 1400px) {
       justify-content: space-between;
@@ -30,13 +34,15 @@
 
     @media (max-width: 950px) {
       flex-direction: column;
-      gap: 30px;
       margin-top: 60px;
     }
   }
 
   &-img {
     width: 100%;
+    @media (max-width: 950px) {      
+      margin-bottom: 15px;      
+    }
 
     img {
       width: 100%;

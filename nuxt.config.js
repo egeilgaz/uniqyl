@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "uniqyl",
+    title: "Uniqyl",
     htmlAttrs: {
       lang: "en",
     },
@@ -19,7 +19,8 @@ export default {
       },
     ],
   },
-  router: {},
+  target: "static",
+  router: { trailingSlash: false },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["~/assets/scss/main.scss"],
 
@@ -44,6 +45,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
     "@nuxtjs/style-resources",
+    "@nuxtjs/redirect-module",
     "@nuxt/image",
     [
       "nuxt-i18n",
@@ -90,6 +92,17 @@ export default {
         }, //dile göre url nameleri değişiyor
       },
     ],
+  ],
+  redirect: [
+    {
+      // eslint-disable-next-line
+      from: "(?!^/$|^/[?].*$)(.*/[?](.*)$|.*/$)",
+      to: (from, req) => {
+        const base = req._parsedUrl.pathname.replace(/\/$/, "");
+        const search = req._parsedUrl.search;
+        return base + (search != null ? search : "");
+      },
+    },
   ],
 
   styleResources: {

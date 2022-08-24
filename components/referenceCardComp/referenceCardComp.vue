@@ -1,7 +1,7 @@
 <template>
-  <a href="#" class="reference-card">
+  <NuxtLink class="reference-card" to="#">
     <nuxt-img :src="card.img" alt="referenceCard" :placeholder="[70]" />
-  </a>
+  </NuxtLink>
 </template>
 
 <script>

@@ -1,16 +1,13 @@
 .primary {
   &-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 24px;
-
-    row-gap: 45px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   &-card {
     display: flex;
     flex-direction: column;
-    gap: 19px;
+    padding: 50px;
 
     img {
       max-width: 50px;
@@ -31,19 +28,18 @@
 
 .reference {
   &-cards {
-    padding-top: 50px;
     padding-bottom: 100px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 120px;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-around;
 
-    @media (max-width: 1500px) {
-      gap: 110px;
+    .reference-card {
+      max-width: 500px;
+      margin-top: 50px;
     }
 
     @media (max-width: 1200px) {
-      gap: 80px;
       padding: 70px 0px;
     }
 

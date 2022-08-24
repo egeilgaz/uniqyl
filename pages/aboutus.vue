@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div> 
     <titleComp :title="title" />
     <section class="about-us-section">
       <storyComp :data="story" />

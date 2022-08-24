@@ -8,15 +8,23 @@
     <div class="header-bg-color">
       <header>
         <nav class="nav">
-          <NuxtLink class="nav-link" to="/">
+          <NuxtLink class="nav-link" :to="localePath('/')">
             <nuxt-img src="logo.png" alt="logo" />
           </NuxtLink>
           <div class="nav-list" :class="menuStatus ? 'active' : ''">
-            <NuxtLink class="nav-link" :to="localePath('features')"> {{$t('features')}} </NuxtLink>
-            <NuxtLink class="nav-link" :to="localePath('price')"> {{$t('prices')}} </NuxtLink>
-            <NuxtLink class="nav-link" :to="localePath('references')"> {{$t('references')}} </NuxtLink>
-            <div class="btn btn-primary btn-nav" @click="$emit('openModal')">
-             {{$t('createMyStore')}}
+            <NuxtLink class="nav-link" :to="localePath('features')">
+              {{ $t("features") }}
+            </NuxtLink>
+            <NuxtLink class="nav-link" :to="localePath('price')">
+              {{ $t("prices") }}
+            </NuxtLink>
+            <NuxtLink class="nav-link" :to="localePath('references')">
+              {{ $t("references") }}
+            </NuxtLink>
+            <div class="nav-link">
+              <div class="btn btn-primary btn-nav" @click="$emit('openModal')">
+                {{ $t("createMyStore") }}
+              </div>
             </div>
           </div>
           <div class="nav-btn" id="navbtn" @click="openMenu">
@@ -34,10 +42,7 @@
             </svg>
           </div>
         </nav>
-        <div
-          v-if="routeName == 'features'"
-          class="features-row features-row-1"
-        >
+        <div v-if="routeName == 'features'" class="features-row features-row-1">
           <div class="features-text">
             <h1>
               Mağazanızın yönetiminde <br />
@@ -48,19 +53,27 @@
               Ürünlerinizi tek bir ekrandan tüm pazaryerlerine ortak şekilde
               yayınlayın ve kolayca düzenleyin.
             </p>
-            <a href="#" class="btn btn-secondary">Hemen Başla</a>
+            <div class="btn btn-secondary" @click="$emit('openModal')">
+              {{ $t("startNow") }}
+            </div>
           </div>
           <div class="features-img">
-            <img src="../../static/features-img-1.png" alt="feature" />
+            <nuxt-img
+              src="features-img-1.png"
+              :placeholder="[95]"
+              alt="feature"
+            />
           </div>
         </div>
         <div v-if="routeName == 'price'" class="features-row">
           <div class="features-text">
             <titleComp :title="title" />
-            <a href="#" class="btn btn-secondary">Hemen Başla</a>
+            <div class="btn btn-secondary" @click="$emit('openModal')">
+              {{ $t("startNow") }}
+            </div>
           </div>
           <div class="features-img">
-            <img src="../../static/price-img.png" alt="price" />
+            <nuxt-img src="price-img.png" alt="price" />
           </div>
         </div>
       </header>

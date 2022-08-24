@@ -1,14 +1,13 @@
 <template>
   <div class="index-page" v-cloak>
     <div class="home-hero">
-      <h1>
-        {{ $t("indexPage.title1") }}
-      </h1>
+      <h1>Bugün hayalinizdeki e-ticaret mağazasını oluşturun.</h1>
       <div class="home-hero-img">
-        <nuxt-img src="home-hero-img.png" :placeholder="[70]" />
+        <nuxt-img src="home-hero-img.png" :placeholder="[98]" />
       </div>
       <p>
-        {{ $t("indexPage.paragraph1") }}
+        E-ticaret operasyonlarınızı kolayca yönetin, her şeyi otomatikleştirin
+        ve tüm pazaryerlerinde ürünlerinizi sergileyin.
       </p>
 
       <div class="btn btn-primary" @click="$nuxt.$emit('openModal')">
@@ -33,7 +32,7 @@
     <section class="features">
       <div class="container">
         <h1 class="heading-primary">
-          {{ $t("indexPage.title2") }}
+          Mağazanızın yönetiminde güçlü özelliklere sahip olun
         </h1>
 
         <featuresComp
@@ -51,12 +50,12 @@
       </div>
 
       <div class="services-text">
-        <h1>
-          {{ $t("indexPage.title3") }}
-        </h1>
+        <h1>Tasarımıyla göz kamaştıran bir e-ticaret sitesine sahip olun.</h1>
 
         <p>
-          {{ $t("indexPage.paragraph2") }}
+          Özenle hazırlanan e-ticaret tema şablonlarından birisini seçin veya
+          özel olarak hazırlanmasını istediğiniz temanızla tüm platformlarda
+          ziyaretçilerinizi karşılayın.
         </p>
 
         <div class="services-benefits">
@@ -77,11 +76,11 @@
         </div>
 
         <div class="benefits-text">
-          <h1>
-            {{ $t("indexPage.title4") }}
-          </h1>
+          <h1>Tek bir tuşla tüm işlerinizi hızlıca çözün.</h1>
           <p>
-            {{ $t("indexPage.paragraph3") }}
+            Toplu ürün yükleyin, siparişlerinizi takip edin, muhasebe
+            programlarına verilerinizi gönderin ve tüm operasyonlarınızın
+            kullanım kolaylığını keşfedin.
           </p>
         </div>
       </div>
@@ -102,11 +101,11 @@
     <!-- testimonail section start here -->
 
     <section class="testimonial">
-      <slider :autoplay="false" animation="fade" height="690px">
+      <slider :autoplay="false" animation="fade" :height="sliderHeight">
         <slider-item v-for="(i, index) in list" :key="index" :style="i">
           <div class="testimonial-slide">
             <div class="testimonial-img">
-              <img :src="getImgUrl(i.img)" alt="slideImg" />
+              <nuxt-img :src="i.img" alt="slideImg" />
             </div>
 
             <div class="testimonial-text">
@@ -119,7 +118,7 @@
               <div class="testimonial-person">
                 <h3>{{ i.userName }}</h3>
                 <p>{{ i.companyName }}</p>
-                <img :src="getImgUrl(i.companyImg)" alt="companyImg" />
+                <nuxt-img :src="i.companyImg" alt="companyImg" />
               </div>
 
               <div class="count">
@@ -141,8 +140,7 @@ export default {
   data() {
     return {
       isLoaded: false,
-      height: 550,
-      windowHeight: process.client ? window.innerHeight : null,
+      windowWidth: process.client ? window.innerWidth : null,
       features: [
         {
           id: 1,
@@ -292,12 +290,26 @@ export default {
       ],
     };
   },
+  computed: {
+    sliderHeight() {
+      let sliderHeight;
+      if (this.windowWidth < 501) {
+        sliderHeight = "800px";
+      } else if (this.windowWidth < 601) {
+        sliderHeight = "900px";
+      } else if (this.windowWidth < 1107) {
+        sliderHeight = "1000px";
+      } else {
+        sliderHeight = "690px";
+      }
+      return sliderHeight;
+    },
+  },
   mounted() {
     this.$nextTick(() => {
       window.addEventListener("resize", this.onResize);
     });
   },
-
   beforeDestroy() {
     window.removeEventListener("resize", this.onResize);
   },
@@ -306,8 +318,7 @@ export default {
       this.isLoaded = true;
     },
     onResize() {
-      this.windowHeight = window.innerHeight;
-      console.log(this.windowHeight)
+      this.windowWidth = window.innerWidth;
     },
   },
 };

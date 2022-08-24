@@ -3,7 +3,9 @@
     <div class="footer">
       <div class="footer-rows">
         <div class="footer-row footer-row-1">
-          <nuxt-img src="logo-white.png" alt="logo" />
+          <NuxtLink :to="localePath('/')">
+            <nuxt-img src="logo-white.png" alt="logo" />
+          </NuxtLink>
 
           <div class="footer-social-links">
             <NuxtLink class="nav-link" to="/">
@@ -23,28 +25,39 @@
 
         <div class="footer-row footer-row-2">
           <div class="footer-links">
-            <h4>Ürün</h4>
-            <NuxtLink to="features"> Özellikler </NuxtLink>
-            <NuxtLink to="price"> Fiyatlar </NuxtLink>
-            <NuxtLink to="references"> Referanslar </NuxtLink>
-            <NuxtLink to="/"> Başarı Hikayeleri </NuxtLink>
+            <h4>{{ $t("product") }}</h4>
+            <NuxtLink :to="localePath('features')">
+              {{ $t("features") }}
+            </NuxtLink>
+            <NuxtLink :to="localePath('price')"> {{ $t("prices") }} </NuxtLink>
+            <NuxtLink :to="localePath('references')">
+              {{ $t("references") }}
+            </NuxtLink>
+            <NuxtLink :to="localePath('stories')">
+              {{ $t("stories") }}
+            </NuxtLink>
           </div>
 
           <div class="footer-links">
-            <h4>Şirket</h4>
-            <a href="">Hakkımızda</a>
-            <a href="">Kariyer</a>
-            <a href="">Blog</a>
+            <h4>{{ $t("company") }}</h4>
+            <NuxtLink :to="localePath('aboutus')">
+              {{ $t("aboutus") }}
+            </NuxtLink>
+            <a href="">{{ $t("career") }}</a>
+            <a href="">{{ $t("blog") }}</a>
           </div>
 
           <div class="footer-links">
-            <h4>Müşteri Hizmetleri</h4>
-            <NuxtLink to="/"> Destek Merkezi </NuxtLink>
-            <NuxtLink to="/"> İletişim </NuxtLink>
-            <NuxtLink to="/"> Kullanım Politikası </NuxtLink>
-            <NuxtLink to="/"> Gizlilik Sözleşmesi </NuxtLink>
-            <NuxtLink to="questions"> Sık Sorulan Sorular </NuxtLink>
-
+            <h4>{{ $t("customerService") }}</h4>
+            <NuxtLink to="/"> {{ $t("supportCenter") }} </NuxtLink>
+            <NuxtLink :to="localePath('contactus')">
+              {{ $t("contactus") }}
+            </NuxtLink>
+            <NuxtLink to="/"> {{ $t("usagePolicy") }} </NuxtLink>
+            <NuxtLink to="/"> {{ $t("confidentialityAgreement") }} </NuxtLink>
+            <NuxtLink :to="localePath('questions')">
+              {{ $t("questions") }}
+            </NuxtLink>
           </div>
         </div>
 
@@ -54,13 +67,13 @@
               <img src="../../static/headphones.png" alt="contact" />
               444 44 444
             </a>
-            <p>Pazartesi 08.30 - 18.00</p>
-            <p>Cumartesi 08.30 - 13.00</p>
+            <p>{{ $t("monday") }} 08.30 - 18.00</p>
+            <p>{{ $t("saturday") }} 08.30 - 13.00</p>
           </div>
 
           <div class="dropdown">
             <div class="dropdown-box" @click="openDropdown()">
-              <button>Türkçe</button>
+              <button>{{ $t(this.$i18n.locale) }}</button>
               <img
                 class="dropbtn"
                 src="../../static/dropdown-arrow.png"
@@ -72,16 +85,21 @@
               class="dropdown-content"
               :class="dropdownStatus ? 'show' : ''"
             >
-              <a href="#">Türkçe</a>
-              <a href="#">English</a>
+              <nuxt-link
+                v-for="locale in availableLocales"
+                :key="locale.code"
+                :to="switchLocalePath(locale.code)"
+              >
+                <div @click="dropdownStatus = false">
+                  {{ $t(locale.code) }}
+                </div>
+              </nuxt-link>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      © 2022 Mapa | Tüm Hakları Saklıdır.
-    </div>
+    <div class="footer-bottom">© 2022 | {{ $t("allRightsReserved") }}</div>
   </footer>
 </template>
 
@@ -92,9 +110,17 @@ export default {
       dropdownStatus: false,
     };
   },
+  computed: {
+    availableLocales() {
+      return this.$i18n.locales;
+    },
+  },
   methods: {
     openDropdown() {
       this.dropdownStatus = !this.dropdownStatus;
+    },
+    switchLang(code) {
+      console.log(code);
     },
   },
 };

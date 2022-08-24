@@ -34,7 +34,7 @@
       </ul>
     </div>
 
-    <a href="#!" class="btn-tertiary">Ücretsiz Dene</a>
+    <a href="#!" class="btn-tertiary"> {{$t('tryForFree')}} </a>
   </div>
 </template>
 
